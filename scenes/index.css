@@ -1,0 +1,45 @@
+/* @import url("/WebXR-Modules/cssNunito.css"); */
+@import url("/WebXR-Modules/css2.css");
+
+
+
+html,
+body,
+#renderCanvas {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-size: 0;
+  position: relative;
+  overflow: hidden;
+  /* display: flex; */
+  font-family: 'Itim', cursive, Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+::placeholder {
+  color: grey;
+  opacity: 0.7;
+}
+#infoBox {
+  transition: height 0.3s ease;
+  background: #fff;
+  border-radius: 3px;
+  width: 20%;
+  height: 20%;
+  box-shadow: 0 3px 7px -3px rgba(250, 242, 242, 0.6);
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  font-size: 1vw;
+}
+#date-time {
+  left: 50%;
+  top: 50%;
+
+}
+
+/* #container{
+   width: 100%;
+  height: 100%;
+} */
+
