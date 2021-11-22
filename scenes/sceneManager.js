@@ -41,8 +41,9 @@ hostDiv.style.display = 'flex';
 hostDiv.style.alignItems = "center";
 hostDiv.style.position= "absolute";
 // hostDiv.style.top = "0%"
-hostDiv.style.width= `${window.innerWidth}px`
-hostDiv.style.height= `${window.innerHeight}px`
+// hostDiv.style.width= `${window.innerWidth}px`
+hostDiv.style.height= '100%'
+
 console.log("This is windows width: " + window.innerWidth);
 // hostDiv.style.height= '200px';
 document.body.appendChild(hostDiv);
@@ -56,8 +57,6 @@ hostDiv2.style.height= "100%"
 hostDiv2.style.position= "absolute";
 // hostDiv2.style.top = "70%"
 // hostDiv2.style.width= `${window.innerWidth}px`
-
-
 document.body.appendChild(hostDiv2);
 
 
@@ -75,11 +74,11 @@ export function searchBox () {
   searchbox.style.display= 'inline-block';
   searchbox.style.color= "black";
   searchbox.placeholder = "";
-  searchbox.style.top= '0%'
+  searchbox.style.top= '5%'
   searchbox.style.borderRadius = "25px";
   searchbox.autocomplete = "off"; // no suggestion box from previous input
-  searchbox.style.height = "50px"; 
-  searchbox.style.border = "20px";
+  searchbox.style.height = "30px"; 
+  searchbox.style.border = "30px";
   // searchbox.style.paddingLeft = "30px"
   // searchbox.style.paddingRight = "35px"
   searchbox.style.marginLeft = 'auto'
@@ -89,15 +88,16 @@ export function searchBox () {
   searchbox.style.outlineColor = "grey";
   searchbox.style.background = "black";
   searchbox.style.width = "3%";
-  searchbox.style.left= "-45%";
+  searchbox.style.left= "2%";
   searchbox.style.outlineStyle = "double";
   searchbox.onmouseover = function(){
 
     //searchbox effect
   searchbox.style.background = 'black';
   searchbox.style.color = 'white';
-  searchbox.style.width = "20%";
-  searchbox.style.left= "1%";
+  searchbox.style.height = "7%"; 
+  // searchbox.style.width = "20%";
+  searchbox.style.left= "45%";
   searchbox.style.outlineStyle = "double";
   searchbox.placeholder = "Search the Web..."; //Css atributes in Css script
 
@@ -113,13 +113,15 @@ export function searchBox () {
     };
     searchbox.onmouseleave = function(){
       
-     //searchbox effect
-  searchbox.style.background = 'black';
-  searchbox.style.color = 'white';
-  searchbox.style.width = "20%";
-  searchbox.style.left= "1%";
-  searchbox.style.outlineStyle = "double";
-  searchbox.placeholder = "Search the Web..."; //Css atributes in Css script
+  
+    //searchbox effect
+    searchbox.style.background = 'black';
+    searchbox.style.color = 'white';
+    searchbox.style.height = "7%"; 
+    searchbox.style.width = "20%";
+    searchbox.style.left= "45%";
+    searchbox.style.outlineStyle = "double";
+    searchbox.placeholder = "Search the Web..."; //Css atributes in Css script
 
   
   //button effect
@@ -176,7 +178,7 @@ export function searchBox () {
   
     };
   //document.body.appendChild(searchbox)
-  hostDiv.appendChild(searchbox);
+  document.body.appendChild(searchbox);
   
 
   //Image button
@@ -294,7 +296,7 @@ export function searchBox () {
     const win = window.open(url, '_self'); //_blank
     win.focus();
   }
-  hostDiv.addEventListener('submit', submitted);
+  document.body.addEventListener('submit', submitted);
 
     
     
@@ -404,7 +406,7 @@ export function buttons(iframe) {
      //embed - iframe
       var embedButton;
       var top= 60;
-      var left= -45;
+      var left= 80;
       var size = 35;
       var topV = `${top}%` //button top
       var topTextV = `${top - 6}%` //button text top
@@ -772,7 +774,7 @@ export function pinScene(text) {
     label.style.position= 'absolute';
     label.style.left= '95%';
     label.style.top= '0%';
-    hostDiv.appendChild(label);
+    document.body.appendChild(label);
   
 
      //dealing with Pin icon

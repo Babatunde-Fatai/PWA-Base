@@ -2,7 +2,7 @@
 const cacheName = 'Maxa-cache-v1';
 // List the files to precache
 const precacheResources = [
-  '/', 
+  '/',
   '/index.html', 
   '/css/style.css', 
   '/js/main.js', 
