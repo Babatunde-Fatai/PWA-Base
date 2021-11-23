@@ -32,6 +32,10 @@ iframe{
 p{
   color: brown;
 }
+.disabledbutton {
+  pointer-events: none;
+  opacity: 0.4;
+}
 div{ 
   -webkit-user-select: none; /* Chrome/Safari */        
   -moz-user-select: none; /* Firefox */

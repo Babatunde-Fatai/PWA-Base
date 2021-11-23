@@ -416,10 +416,12 @@ export function buttons(iframe) {
       var sbEmbed = '../textures/embed_black.png'
       var sgEmbed = '../textures/embed_g.png'
       var titleEmbed = 'embed to your website'
-      var embedButton = new Button(embedButton, leftV, topV, titleEmbed, swEmbed, sizeV, hostDiv, false)
+      embedButton = new Button(embedButton, leftV, topV, titleEmbed, swEmbed, sizeV, hostDiv, true)
       embedButton.create(sbEmbed)
       embedButton.action(swEmbed, sbEmbed);
       embedButton.click("embedButton", "iframe link copied", iframe, sgEmbed, topTextV);
+      
+      
 
       //Share on social media
       var shareButton;
@@ -429,7 +431,7 @@ export function buttons(iframe) {
       var sbShare = '../textures/share-black.png'
       // var sgShare = '../textures/share-g.png'
       var titleShare = 'Share on social media'
-      var shareButton = new Button(shareButton, leftV, topV, titleShare, swShare, sizeV, hostDiv, true)
+      shareButton = new Button(shareButton, leftV, topV, titleShare, swShare, sizeV, hostDiv, true)
       shareButton.create(sbShare)
       shareButton.action(swShare, sbShare);
       
@@ -471,7 +473,7 @@ export function buttons(iframe) {
       var sbFun = '../textures/fun-black.png'
       var sgShare = '../textures/fun-g.png'
       var titleFun = 'Fun and Games'
-      var funButton = new Button(funButton, leftV, topV, titleFun, swFun, sizeV, hostDiv, true)
+      funButton = new Button(funButton, leftV, topV, titleFun, swFun, sizeV, hostDiv, true)
       funButton.create(sbFun)
       funButton.action(swFun, sbFun);
       funButton.click("funButton", "Funlinked", iframe, sgShare, topTextV);
@@ -485,7 +487,7 @@ export function buttons(iframe) {
        var sbcredit = '../textures/credit-black.png'
        // var sgShare = '../textures/share-g.png'
        var titlecredit = 'Credits'
-       var creditButton = new Button(creditButton, leftV, topV, titlecredit, swcredit, sizeV, hostDiv, true)
+       creditButton = new Button(creditButton, leftV, topV, titlecredit, swcredit, sizeV, hostDiv, true)
        creditButton.create(sbcredit)
        creditButton.action(swcredit, sbcredit);
       
@@ -505,10 +507,12 @@ export function buttons(iframe) {
       var sbEmbed = '../textures/pin-white.png'
       var sgEmbed = '../textures/pin-black.png'
       var titleEmbed = 'Pin current scene'
-      var pinScene = new Button(pinScene, left2V, topV, titleEmbed, swEmbed, sizeV, hostDiv2, true)
+      pinScene = new Button(pinScene, left2V, topV, titleEmbed, swEmbed, sizeV, hostDiv2, true)
       pinScene.create(sbEmbed)
       pinScene.action(swEmbed, sbEmbed);
       pinScene.click("embedButton", "iframe link copied", iframe, sgEmbed, topTextV);
+      pinScene.Deactivate();
+
       
 
       var hideUI;
@@ -520,7 +524,7 @@ export function buttons(iframe) {
       var sbEmbed = '../textures/hideUI-black.png'
       var sgEmbed = '../textures/hideUI-g.png'
       var titleEmbed = 'Hide all Screen UI'
-      var hideUI = new Button(hideUI, left2V, topV, titleEmbed, swEmbed, sizeV, hostDiv2, true)
+      hideUI = new Button(hideUI, left2V, topV, titleEmbed, swEmbed, sizeV, hostDiv2, true)
       hideUI.create(sbEmbed)
       hideUI.action(swEmbed, sbEmbed);
       hideUI.click("embedButton", "iframe link copied", iframe, sgEmbed, topTextV);
@@ -575,8 +579,8 @@ export function buttons(iframe) {
     console.log("You are now inactive")
 
     // form.style.display = 'none';
-    hostDiv.style.display = 'none';
-    hostDiv2.style.display = 'none';
+    // hostDiv.style.display = 'none';
+    // hostDiv2.style.display = 'none';
     
   }
   function resetTimer() {
@@ -585,8 +589,8 @@ export function buttons(iframe) {
 
      //Do this when active again
     //  form.style.display = 'flex';
-     hostDiv.style.display = 'flex';
-     hostDiv2.style.display = 'flex';
+    //  hostDiv.style.display = 'flex';
+    //  hostDiv2.style.display = 'flex';
   }
 
   
@@ -670,95 +674,6 @@ console.log(dateTime)
 export function sceneDetail () {
 
 
-  // //Scene text detail
-  //   var detail = document.createElement('div');
-  //   detail.setAttribute('type', '')
-  //   //Details expansion Logo
-  //   var detailIcon = document.createElement("img"); 
-  //   detailIcon.setAttribute('type', 'image');
-  //   detailIcon.setAttribute('id',   'myDetails');
-  //   detailIcon.style.left= "95%";
-  //   detailIcon.style.top= '90%'
-  //   detailIcon.style.width = "64px";
-  //   detailIcon.style.height = "64px";
-  //   detailIcon.src= "../textures/3d-model.png";
-  //   detailIcon.title = "Learn More";
-  //   detailIcon.style.position= 'absolute';
-  //   var open = false;
-  //   detailIcon.onclick = function (){
-  //     //open/close tab
-  //    tabs();
-    
-
-  //   }
-  //   detailIcon.onmouseover = function (){
-
-  //   detailIcon.src= "../textures/3d-model-02.png";
-
-  //   }
-  //   detailIcon.onmouseleave = function (){
-
-  //   detailIcon.src= "../textures/3d-model.png";
-
-  //   }
-  //   form.appendChild(detailIcon);  
-
-  //   //function for open/close info tab
-  // function tabs() {
-  // if (open == false){
-
-  //   textBox.style.display= 'flex';
-  //   open = true;
-  //   console.log('opened tab')
-
-  //     // if tab has been open for a while
-  //   setTimeout(function () {
-  //   if (open == true)
-  //   { 
-
-  //    textBox.style.display= 'none';
-
-  //    open = false;
-     
-
-  //   }else {}} , 15000);
-
-
-  // }else {
-
-  //   textBox.style.display= 'none';
-
-  //   open = false;
-  //   console.log('closed tab')
-
-
-  // }
-
-  // }
-  
-  //   var textBox = document.createElement("h2"); 
-  //   var newContent = document.createTextNode("This spot is going to have details on the particular scene and any other info or addon"); 
-  //   textBox.appendChild(newContent);
-  //   textBox.style.position= 'absolute';
-  //   textBox.setAttribute('id',   'infoBox');
-  //   textBox.style.display= 'none';
-  //   textBox.style.left= '77%';
-  //   textBox.style.top= '75%';
-  //  // newDiv.style.background= 'white';
-  //   form.appendChild(textBox);  
-
-
-
-  
-    
-  //   //Search engine to use
-  // const url = 'https://www.babylonjs.com/';
-
-  // function submitted(event) { //function for submission
-  //   event.preventDefault();
-  //   const win = window.open(url, '_blank');
-  //   win.focus();
-  // }
 
 
 
@@ -1033,6 +948,10 @@ export function pinScene(text) {
 //button object
 
 
+var buttonGroup = [];
+console.log("This is the array: " + buttonGroup[0])
+//Add all buttons
+
 
 
 
@@ -1047,6 +966,15 @@ class Button {
   this.scale = scale;
   this.active = active;
   }
+  Deactivate(){
+   
+    if(this.active === true){
+      this.active = false;
+
+    }
+    
+     
+   }
   create(sb){
 
     //check if Button should be active
@@ -1180,17 +1108,13 @@ class Button {
 
 
   }
-  Deactivate(){
+ 
+  hideAllButtons(){
+    //to hide all buttons except this one
+  //  array.forEach(element => {
+     
+  //  });
 
-    if(this.active === true){
-
-      this.active = false;
-
-
-    }else{
-      this.active = false;
-    }
-    
   }
 
   
