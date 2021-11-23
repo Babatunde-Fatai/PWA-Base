@@ -4,7 +4,7 @@
     "version": "0.0.1",
     "start_url": "/",
     "description": "Themes created with love for developers :-)",
-    "display": "standalone",
+    "display": "minimal-ui",
     "icons": [ 
       {
      "src": "./icons/icon512.png",
