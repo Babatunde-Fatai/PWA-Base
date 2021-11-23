@@ -5,9 +5,14 @@ import * as sceneManager from "./sceneManager.js";
   var checkboxText; //checkbox text
   var checkbox;
   var pinText;
-  sceneManager.searchBox();
-  sceneManager.pinScene(pinText);
-  sceneManager.sceneDetail();
+//   sceneManager.searchBox();
+  sceneManager.pinScene();
+  
+  //
+//   $("#info").removeClass("disabledbutton");
+//   $(["#info"]).find('input').each(function () {
+//     $(this).attr('disabled', 'disabled');
+// });
 
   var iframe = "iframe.com"
   sceneManager.buttons(iframe);

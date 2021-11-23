@@ -4,6 +4,7 @@ const cacheName = 'Maxa-cache-v1';
 const precacheResources = [
   '/',
   '/index.html', 
+  '/offline.html',
   '/css/style.css', 
   '/js/main.js', 
   '/js/app/editor.js', 
@@ -11,7 +12,6 @@ const precacheResources = [
   './scenes/sceneManager.js',
   '/WebXR-Modules/babylon.js',
   '/WebXR-Modules/babylonjs.materials.min.js',
-  '/icons',
   '/icons/icon16.png',
   '/textures/3d-model.png',
   '/textures/3d-model-02.png',
