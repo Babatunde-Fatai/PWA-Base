@@ -491,31 +491,12 @@ export function buttons(iframe) {
        creditButton.create(sbcredit)
        creditButton.action(swcredit, sbcredit);
       
+    
 
-       //Buttons to the right
-
-        //embed - iframe
-      var pinScene;
+      var hideUI;
       var left2= 95;
       var top2 = 60;
       var size = 35;
-      var topV = `${top2}%` //button top
-      var topTextV = `${top2 - 6}%` //button text top
-      var sizeV = `${size}px` //button text top
-      var left2V = `${left2}vw` //left
-      var swEmbed = '../textures/pin-black.png'
-      var sbEmbed = '../textures/pin-white.png'
-      var sgEmbed = '../textures/pin-black.png'
-      var titleEmbed = 'Pin current scene'
-      pinScene = new Button(pinScene, left2V, topV, titleEmbed, swEmbed, sizeV, hostDiv2, true)
-      pinScene.create(sbEmbed)
-      pinScene.action(swEmbed, sbEmbed);
-      pinScene.click("embedButton", "iframe link copied", iframe, sgEmbed, topTextV);
-      pinScene.Deactivate();
-
-      
-
-      var hideUI;
       var topV = `${top2}%` //button top
       var topTextV = `${top2 - 6}%` //button text top
       var sizeV = `${size}px` //button text top
@@ -684,121 +665,130 @@ export function pinScene(text) {
     //To check if user already saved a favourite page, so as to retain pin icon
     var fave = localStorage.getItem('pinScene'); //favourite/pinned scene
 
+    var pinScene;
+    var left2= 95;
+    var top2 = 60;
+    var size = 35;
+    var iframe;
+    var topV = `${top2}%` //button top
+    var topTextV = `${top2 - 6}%` //button text top
+    var sizeV = `${size}px` //button text top
+    var left2V = `${left2}vw` //left
+    var swEmbed = '../textures/pin-white.png'
+    var swEmbed2 = '../textures/pin-white2.png'
+    var sbEmbed = '../textures/pin-black.png'
+    var sgEmbed = '../textures/pin-black.png'
+    var titleEmbed = 'Pin current scene'
+    pinScene = new Button(pinScene, left2V, topV, titleEmbed, swEmbed, sizeV, hostDiv2, true)
+    pinScene.create(swEmbed)
+    pinScene.action(swEmbed2, swEmbed);
+    pinScene.PinClick(sbEmbed, fave);
     
-    var label = document.createElement('LABEL')
-    label.style.position= 'absolute';
-    label.style.left= '95%';
-    label.style.top= '0%';
-    document.body.appendChild(label);
-  
-
-     //dealing with Pin icon
-    var pinIcon = document.createElement("img");
-    pinIcon.setAttribute('type', 'image');
-    pinIcon.setAttribute('id',   'myPin');
-    pinIcon.style.left= "100%";
-    pinIcon.style.top= '10.5%'
-    pinIcon.style.position= 'absolute';
-    if(fave == null){ //checking if already saved
-    
-    //unpin icon
-    pinIcon.style.width = "30px";
-    pinIcon.style.height = "30px";
-    pinIcon.src= "../textures/tack.png";
-    pinIcon.title = "Pin this Scene"; //Tooltip
-    var pin = true;
-    
-
-    }else {
-
-      //pinned icon
-    pinIcon.src= "../textures/pin.png";
-    pinIcon.style.width = "30px";
-    pinIcon.style.height = "30px";
-    pinIcon.title = "Unpin this Scene"; //Tooltip
-
-    var pin = false;
-
-
-
-    }
-    pinIcon.onclick = function (){
+    pinScene.onclick = function (){
 
       selectScene();
 
 
     }
-    pinIcon.onmouseover = function () {
 
-    if(fave == null){
-
-    pinIcon.style.width = "35px";
-    pinIcon.style.height = "35px";
-
-
-
-    }
-
-    }
-    pinIcon.onmouseleave = function (){
-    
-    if(fave == null){
-
-    pinIcon.style.width = "30px";
-    pinIcon.style.height = "30px";
-
-
-
-    }
-
-    }
-    label.appendChild(pinIcon); 
     
 
   //function for pin/unpinning scenes
-  function selectScene() {
+  // function selectScene() {
 
-    //Condition to switch icons
-  if (fave == null){
-    pinIcon.src= "../textures/pin.png";
-    pinIcon.style.width = "30px";
-    pinIcon.style.height = "30px";
-    //newContent = document.createTextNode("Unpin Scene")
-
-   // pin = true;
+  //   //Condition to switch icons
+  // if (fave == null){
     
-    var currentScene = localStorage.getItem('newScene'); //get current scene
-    var fav = localStorage.setItem('pinScene', currentScene) //save it to storage
-   // var farev = localStorage.removeItem('newScene') //remove saved scene
-    console.log("Saved Scene: " + currentScene)
-    reload();
-
-    //reload after saving scene to keep unpin alive
-
-  }else {
+  //   var currentScene = localStorage.getItem('newScene'); //get current scene
+  //   var fav = localStorage.setItem('pinScene', currentScene) //save it to storage
+  //  // var farev = localStorage.removeItem('newScene') //remove saved scene
+  //   console.log("Saved Scene: " + currentScene)
+  //   reload();
 
 
-   //change icon
-    pinIcon.src= "../textures/tack.png";
-    pinIcon.style.width = "30px";
-    pinIcon.style.height = "30px";
-    //newContent = document.createTextNode("Pin Scene")
+  // }else {
 
-    //pin = false;
+  //   var fav = localStorage.removeItem('pinScene') //remove saved scene
+  //   console.log("Unpinned from scene")
 
-    var fav = localStorage.removeItem('pinScene') //remove saved scene
-    console.log("Unpinned from scene")
-
-  }
+  // }
 
  
 
-  }
+  // }
 
-  //reload function
-  function reload() {
-    reload = location.reload();
-    }
+  // //reload function
+  // function reload() {
+  //   reload = location.reload();
+  //   }
+
+    // var label = document.createElement('LABEL')
+    // label.style.position= 'absolute';
+    // label.style.left= '95%';
+    // label.style.top= '0%';
+    // document.body.appendChild(label);
+
+      // //dealing with Pin icon
+      // var pinIcon = document.createElement("img");
+      // pinIcon.setAttribute('type', 'image');
+      // pinIcon.setAttribute('id',   'myPin');
+      // pinIcon.style.left= "100%";
+      // pinIcon.style.top= '10.5%'
+      // pinIcon.style.position= 'absolute';
+      // if(fave == null){ //checking if already saved
+      
+      // //unpin icon
+      // pinIcon.style.width = "30px";
+      // pinIcon.style.height = "30px";
+      // pinIcon.src= "../textures/tack.png";
+      // pinIcon.title = "Pin this Scene"; //Tooltip
+      // var pin = true;
+      
+  
+      // }else {
+  
+      //   //pinned icon
+      // pinIcon.src= "../textures/pin.png";
+      // pinIcon.style.width = "30px";
+      // pinIcon.style.height = "30px";
+      // pinIcon.title = "Unpin this Scene"; //Tooltip
+  
+      // var pin = false;
+  
+  
+  
+      // }
+      // pinIcon.onclick = function (){
+  
+      //   selectScene();
+  
+  
+      // }
+      // pinIcon.onmouseover = function () {
+  
+      // if(fave == null){
+  
+      // pinIcon.style.width = "35px";
+      // pinIcon.style.height = "35px";
+  
+  
+  
+      // }
+  
+      // }
+      // pinIcon.onmouseleave = function (){
+      
+      // if(fave == null){
+  
+      // pinIcon.style.width = "30px";
+      // pinIcon.style.height = "30px";
+  
+  
+  
+      // }
+  
+      // }
+      // label.appendChild(pinIcon); 
 
 
 }
@@ -949,8 +939,9 @@ export function pinScene(text) {
 
 
 var buttonGroup = [];
-console.log("This is the array: " + buttonGroup[0])
+var unpinWarning = false; //alert users after X amount of reload that they are pinned
 //Add all buttons
+
 
 
 
@@ -966,16 +957,11 @@ class Button {
   this.scale = scale;
   this.active = active;
   }
-  Deactivate(){
-   
-    if(this.active === true){
+  Deactivate(){   
       this.active = false;
-
-    }
-    
      
    }
-  create(sb){
+  create(srcDafault){
 
     //check if Button should be active
     if(this.active === true){
@@ -997,7 +983,7 @@ class Button {
     //searchbutton.style.scale = "1px";
     this.name.style.width = this.scale;
     this.name.style.height = this.scale; 
-    this.name.src= sb;
+    this.name.src = srcDafault;
     this.name.title = this.tl; //Tooltip
     this.div.appendChild(this.name); 
     // document.body.appendChild(this.name); 
@@ -1011,20 +997,19 @@ class Button {
 
   
   }
-  action(sw, sb){
-
+  action(srcOnOver, srcOnLeave){
 
 
     if(this.active === true){
 
       
      this.name.onmouseleave = function (){
-      this.src = sb;
+      this.src = srcOnLeave;
       this.style.width = "35px";
       this.style.height = "35px"; 
     }
     this.name.onmouseover = function (){
-      this.src = sw;
+      this.src = srcOnOver;
       this.style.width = "40px";
       this.style.height = "40px"; 
     } 
@@ -1108,7 +1093,53 @@ class Button {
 
 
   }
+  PinClick(sg, fave){
+   //click property for pin scene
+
+    this.name.onclick = function (){
+      this.name.src = sg;
+      selectScene();
+    
+
+
+     }
+    
+   //function that switches between select/unselect
+   function selectScene() {
+
+    //Condition to switch icons
+  if (fave == null){
+    
+    
+    var currentScene = localStorage.getItem('newScene'); //get current scene
+    var fav = localStorage.setItem('pinScene', currentScene) //save it to storage
+   // var farev = localStorage.removeItem('newScene') //remove saved scene
+    console.log("Saved Scene: " + currentScene)
+    reload();
+    const alert = "Scene Pinned successfully: Unpin to see other experiences"
+    window.alert(alert)
+
+
+  }else {
+
+    var fav = localStorage.removeItem('pinScene') //remove saved scene
+    console.log("Unpinned from scene")
+    const alert = "Scene Unpinned successfully: ENJOY"
+    window.alert(alert)
+
+  }
+
  
+
+    }
+
+  //reload function
+  function reload() {
+    reload = location.reload();
+    }
+  
+
+  }
   hideAllButtons(){
     //to hide all buttons except this one
   //  array.forEach(element => {
