@@ -12,6 +12,7 @@ const precacheResources = [
   './scenes/sceneManager.js',
   '/WebXR-Modules/babylon.js',
   '/WebXR-Modules/babylonjs.materials.min.js',
+  '/jquery-ui.min.js',
   '/icons/icon16.png',
   '/textures/3d-model.png',
   '/textures/3d-model-02.png',
