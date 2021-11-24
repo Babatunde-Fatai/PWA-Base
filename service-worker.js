@@ -71,7 +71,8 @@ const precacheResources = [
     '/textures/hideUI-white.png',
     '/textures/hideUI-g.png',
     '/textures/refresh.png',
-   '/textures/refresh02.png'
+   '/textures/refresh02.png',
+   '/textures/Maxa-logo-white.png'
 
 ];
 

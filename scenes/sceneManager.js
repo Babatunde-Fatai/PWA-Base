@@ -685,6 +685,22 @@ export function pinScene() {
     hideUI.click("hideUI", "iframe link copied", iframe, sgEmbed, topTextV);
 
     
+    //Logo
+
+        //Reload Image
+        var maxaLogo = document.createElement("img"); 
+        maxaLogo.setAttribute('type', 'image');
+        maxaLogo.setAttribute('id',   'maxaLogo');
+        // searchbutton.style.position= 'absolute';
+        maxaLogo.style.position= 'absolute';
+       // searchbutton.style.background = "darkslategrey";
+        maxaLogo.style.left= "2%";
+        maxaLogo.style.top= '5%'
+        //searchbutton.style.scale = "1px";
+        maxaLogo.style.width = "190px";
+        maxaLogo.style.height = "80.8px"; 
+        maxaLogo.src= "../textures/Maxa-logo-white.png";
+      document.body.appendChild(maxaLogo);  
 
   //function for pin/unpinning scenes
   // function selectScene() {
