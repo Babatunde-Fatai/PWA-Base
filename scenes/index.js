@@ -35,22 +35,6 @@ function changeScene(sceneUrl) {
     frame.src = sceneUrl;
 }
 
-
-// if(frame){
-// //fit iframe to content
-// frame.addEventListener('load', function () {
-//     // Get the height of the content
-//     const height = frame.contentDocument.body.scrollHeight;
-//      console.log("height adjusting");
-//     // Set the height of iframe
-//     frame.setAttribute('height', `${height}px`);
-// });
-
-// }
-
-
-
-
 //function to bring in game iframe src
 // function gameScene() {
 //     $("gameFrames").load("./tickTac.html");
