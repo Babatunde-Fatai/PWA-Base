@@ -5,7 +5,6 @@ const precacheResources = [
   '/',
   '/index.html', 
   '/offline.html',
-  '/css/style.css', 
   '/js/main.js', 
   '/js/app/editor.js', 
   '/js/lib/actions.js',
@@ -16,9 +15,12 @@ const precacheResources = [
   '/icons/icon16.png',
   '/textures/3d-model.png',
   '/textures/3d-model-02.png',
+  //css
   '/style.css',
+  '/css/style.css', 
   '/scenes/index.css',
-  '/WebXR-Modules/css2.css',
+  '/css/css2.css',
+  '/css/itim.woff2',
   //furball assets
   '/scenes/furballScene.html',
   '/scenes/furballScene.js',

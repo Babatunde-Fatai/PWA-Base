@@ -700,7 +700,11 @@ export function pinScene() {
         maxaLogo.style.width = "190px";
         maxaLogo.style.height = "80.8px"; 
         maxaLogo.src= "../textures/Maxa-logo-white.png";
-      document.body.appendChild(maxaLogo);  
+        maxaLogo.onmouseover = function(){
+       
+
+        }
+        document.body.appendChild(maxaLogo);  
 
   //function for pin/unpinning scenes
   // function selectScene() {
