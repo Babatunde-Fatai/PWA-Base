@@ -16,26 +16,6 @@ var engine = new BABYLON.Engine(canvas, true);
 // sceneManager.createCheckbox(checkboxText, checkbox); // deal wth onclick event
 // sceneManager.pinScene(pinText);
 
-class Background {
-      constructor (skyboxLink, scene) {
-          this.skybox = BABYLON.Mesh.CreateBox("skyBox", 10000.0, scene);
-          this.skyboxMaterial = new BABYLON.BackgroundMaterial("skyBox", scene);
-          this.skyboxMaterial.backFaceCulling = false;
-          this.skyboxMaterial.disableLighting = true;
-          var files = skyboxLink
-        //   if() {
-
-        //   }else{
-              
-        //   }
-          this.skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture.CreateFromImages(files, scene);
-          this.skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
-          this.skybox.material = this.skyboxMaterial;
-          this.skybox.infiniteDistance = true;
-      }
-  } //handling skybox insertion
-
-
 
 // =============
 // Shaders
@@ -93,7 +73,9 @@ var furballScene = function () {
     // baseLight.groundColor = new Color3(1, 1, 1);
 
     const mat = new CustomMaterial('s', scene);
-    mat.diffuseColor = new Color3(72 / 255, 175 / 255, 240 / 255);
+    mat.diffuseColor = new Color3(72 / 255, 175 / 255, 240 / 255); //Color
+   // mat.diffuseColor = new Color3(72 / 255, 240 / 255, 175 / 255); //Color
+    //mat.diffuseColor = new Color3(240 / 255, 175 / 255, 72 / 255); //Color
     mat.specularColor = new Color3(1, 1, 1);
     mat.specularColor = new Color3(0, 0, 0);
     mat.freeze();

@@ -442,18 +442,18 @@ export function buttons(iframe) {
       var left= 95;
       var size = 35;
       var topVE = `${top}%` //button top
-      var topTextV = `${top}%` //button text top
+      var topTextV = `${87 - top}%` //button text top
       var sizeV = `${size}px` //button text top
       var leftV = `${left}%` //left
       var swEmbed = '../textures/embed_white.png'
       var sbEmbed = '../textures/embed_black.png'
       var sgEmbed = '../textures/embed_g.png'
       var titleEmbed = 'embed to your website'
-      embedButton = new Button(embedButton, leftV, topVE, titleEmbed, swEmbed, sizeV, hostDiv, true)
+      var alert = "iframe link copied";
+      embedButton = new Button(embedButton, leftV, topVE, titleEmbed, sbEmbed, sizeV, hostDiv, true)
       embedButton.create(sbEmbed, 'embed')
-      embedButton.action(swEmbed, sbEmbed);
-      embedButton.click("embedButton", "iframe link copied", iframe, sgEmbed, topTextV);
-      
+      embedButton.click("embedButton", alert, iframe, swEmbed, sbEmbed, sgEmbed, topTextV);
+      //(name, alert, Link, src1, src2, scr3, textTop)
 
        //Fun button
        var funButton;
@@ -461,25 +461,24 @@ export function buttons(iframe) {
        var topTextV = `${top + 7 - 6}%` //button text top
        var swFun = '../textures/fun-white.png'
        var sbFun = '../textures/fun-black.png'
-       var sgShare = '../textures/fun-g.png'
+       var sgFun = '../textures/fun-g.png'
        var titleFun = 'Fun and Games'
        funButton = new Button(funButton, leftV, topVF, titleFun, swFun, sizeV, hostDiv, true)
        funButton.create(sbFun, 'fun')
-       funButton.action(swFun, sbFun);
-       funButton.click("funButton", "Funlinked", iframe, sgShare, topTextV);
+       funButton.click("funButton", alert, iframe, swFun, sbFun, sgFun, topTextV);
 
       //Credits button
       var creditButton;
       var topVC = `${top - 18}%` //top
       var topTextV = `${top + 7 - 6}%` //button text top
-      var swcredit = '../textures/credit-white.png'
-      var sbcredit = '../textures/credit-black.png'
-      // var sgShare = '../textures/share-g.png'
+      var swCredit = '../textures/credit-white.png'
+      var sbCredit = '../textures/credit-black.png'
+      var sgCredit = '../textures/fun-black.png'
       var titlecredit = 'Credits'
-      creditButton = new Button(creditButton, leftV, topVC, titlecredit, swcredit, sizeV, hostDiv, true)
-      creditButton.create(sbcredit, 'Credits')
-      creditButton.action(swcredit, sbcredit);
-      creditButton.Attributes("creditButton")
+      creditButton = new Button(creditButton, leftV, topVC, titlecredit, swCredit, sizeV, hostDiv, true)
+      creditButton.create(sbCredit, 'Credits')
+      creditButton.click("creditButton", alert, iframe, swCredit, sbCredit, sgCredit, topTextV);
+
       
 
 
@@ -491,46 +490,52 @@ export function buttons(iframe) {
       var topTextV = `${top + 7 - 6}%` //button text top
       var swShare = '../textures/share-white.png'
       var sbShare = '../textures/share-black.png'
-      // var sgShare = '../textures/share-g.png'
+      var sgShare = '../textures/share-g.png'
       var titleShare = 'Share on social media'
       shareButton = new Button(shareButton, leftV, topVS, titleShare, swShare, sizeV, hostDiv, true)
       shareButton.create(sbShare, 'shareButton')
-      shareButton.action(swShare, sbShare);
+      shareButton.click("shareButton", alert, iframe, swShare, sbShare, sgShare, topTextV);
+
+
       
 
-      var shareFace;
-      var topV2 = "80vh" //top 
-      var leftVS = `${left - 8}%` //left
-      var topTextV = `${top - 6}%` //button text top
-      // var leftV = `${left + 5}%` //left
-      // var sizeV = `${size - 5}px` //button text top
-      var swface = '../textures/facebook-white.png'
-      var sbface = '../textures/facebook-black.png'
-      var sgface = '../textures/facebook-g.png'
-      var titleface = 'Share on Facebook'
-      var shareFace = new Button(shareFace, leftVS, topVS, titleface, swface, sizeV, hostOrg, true)
-      shareFace.create(sbface, 'shaFace')
-      shareFace.action(swface, sbface);
+      // var shareFace;
+      // var topV2 = "80vh" //top 
+      // var leftVS = `${left - 8}%` //left
+      // var topTextV = `${top - 6}%` //button text top
+      // // var leftV = `${left + 5}%` //left
+      // // var sizeV = `${size - 5}px` //button text top
+      // var swFace = '../textures/facebook-white.png'
+      // var sbFace = '../textures/facebook-black.png'
+      // var sgFace = '../textures/facebook-g.png'
+      // var titleface = 'Share on Facebook'
+      // var shareFace = new Button(shareFace, leftVS, topVS, titleface, swFace, sizeV, hostOrg, true)
+      // shareFace.create(sbFace, 'shaFace')
+      // shareFace.click("shareFace", alert, iframe, swFace, sbFace, sgFace, topTextV);
 
-      var shareTwit;
-      var topV2 = "80vh" //top 
-      // var leftVS = `${leftV + 70}%` //left
-      var topTextV = `${top - 6}%` //button text top
-      var leftV = `${left - 4}%` //left
-      // var sizeV = `${size - 5}px` //button text top
-      var swface = '../textures/detailsW.png'
-      var sbface = '../textures/detailsW.png'
-      var sgface = '../textures/detailsW.png'
-      var titleface = 'Share on Facebook'
-      var shareTwit = new Button(shareTwit, leftV, topVS, titleface, swface, sizeV, hostOrg, true)
-      shareTwit.create(sbface, 'shaTwit')
-      shareTwit.action(swface, sbface);
+
+      // var shareTwit;
+      // var topV2 = "80vh" //top 
+      // // var leftVS = `${leftV + 70}%` //left
+      // var topTextV = `${top - 6}%` //button text top
+      // var leftV = `${left - 4}%` //left
+      // // var sizeV = `${size - 5}px` //button text top
+      // var swTwit = '../textures/detailsW.png'
+      // var sbTwit = '../textures/detailsW.png'
+      // var sgTwit = '../textures/detailsW.png'
+      // var titleface = 'Share on Facebook'
+      // var shareTwit = new Button(shareTwit, leftV, topVS, titleface, swTwit, sizeV, hostOrg, true)
+      // shareTwit.create(sbTwit, 'shaTwit')
+      // shareTwit.click("shareTwit", alert, iframe, swTwit, sbTwit, sgTwit, topTextV);
+
    
 
    
 
      
         //Reload Image
+    
+    
     var refreshButton = document.createElement("img"); 
     refreshButton.setAttribute('type', 'image');
     refreshButton.setAttribute('id',   'myBtn');
@@ -636,37 +641,16 @@ export function pinScene() {
     var topTextV = `${top2 - 6}%` //button text top
     var sizeV = `${size}px` //button text top
     var left2V = `${left2 - 92}%` //left
-    var swEmbed = '../textures/pin-white.png'
-    var swEmbed2 = '../textures/pin-white2.png'
-    var sbEmbed = '../textures/pin-black.png'
-    var sgEmbed = '../textures/pin-black.png'
+    var swPin= '../textures/pin-white2.png'
+    // var swEmbed2 = '../textures/pin-white2.png'
+    var sbPin = '../textures/pin-black.png'
+    var sgPin = '../textures/pin-white.png'
     var titleEmbed = `Pin Current Scene 😻 `
-    pinScene = new Button(pinScene, left2V, topV, titleEmbed, swEmbed, sizeV, hostDiv2, true)
-    pinScene.create(swEmbed)
-    pinScene.action(swEmbed2, swEmbed);
-    pinScene.onclick = function (){
-
-      selectScene();
-
-      //pic change
-   
-        
-       
-        // embedText.style.display= 'flex';
-       
-        // window.alert(alert)
-       
-        
-      
-            // if tab has been open for a while
-        setTimeout(function () {
-        // embedText.style.display= 'none';
-          
-          } , 1500);
-      
-         
-
-    }
+    var alert = "Current Scene Pinned😻 Remember to unpin to see more";
+    pinScene = new Button(pinScene, left2V, topV, titleEmbed, sgPin, sizeV, hostDiv2, true)
+    pinScene.create(sgPin)
+    pinScene.click("pinScene", alert, iframe, swPin, sbPin, sgPin, topTextV);
+    
 
     //Hide UI
     var hideUI;
@@ -674,135 +658,40 @@ export function pinScene() {
     var topTextV = `${top - 6}%` //button text top
     var sizeV = `${size}px` //button text top
     var left2V = `${left2 - 92}%` //left
-    var swEmbed = '../textures/hideUI-g.png'
-    var sbEmbed = '../textures/hideUI-black.png'
-    var sgEmbed = '../textures/hideUI-g.png'
+    var swHide = '../textures/hideUI-g.png'
+    var sbHide = '../textures/hideUI-black.png'
+    var sgHide = '../textures/hideUI-g.png'
     var titleEmbed = 'Hide all Screen UI'
-    hideUI = new Button(hideUI, left2V, topVH, titleEmbed, swEmbed, sizeV, hostDiv2, true)
-    hideUI.create(sbEmbed)
-    hideUI.action(swEmbed, sbEmbed);
-    hideUI.click("hideUI", "iframe link copied", iframe, sgEmbed, topTextV);
+    hideUI = new Button(hideUI, left2V, topVH, titleEmbed, swHide, sizeV, hostDiv2, true)
+    hideUI.create(sbHide)
+    hideUI.click("hideUI", alert, iframe, swHide, sbHide, sgHide, topTextV);
+
 
     
     //Logo
 
-        //Reload Image
+        //Maxa logo
         var maxaLogo = document.createElement("img"); 
         maxaLogo.setAttribute('type', 'image');
         maxaLogo.setAttribute('id',   'maxaLogo');
         // searchbutton.style.position= 'absolute';
-        maxaLogo.style.position= 'absolute';
+        maxaLogo.style.position= 'fixed';
        // searchbutton.style.background = "darkslategrey";
-        maxaLogo.style.left= "2%";
+        maxaLogo.style.left= "3%";
         maxaLogo.style.top= '5%'
         //searchbutton.style.scale = "1px";
-        maxaLogo.style.width = "190px";
-        maxaLogo.style.height = "80.8px"; 
+        maxaLogo.style.width = "120px";
+        maxaLogo.style.height = "50px"; 
         maxaLogo.src= "../textures/Maxa-logo-white.png";
         maxaLogo.onmouseover = function(){
        
 
         }
-        document.body.appendChild(maxaLogo);  
-
-        
-
-  //function for pin/unpinning scenes
-  // function selectScene() {
-
-  //   //Condition to switch icons
-  // if (fave == null){
-    
-  //   var currentScene = localStorage.getItem('newScene'); //get current scene
-  //   var fav = localStorage.setItem('pinScene', currentScene) //save it to storage
-  //  // var farev = localStorage.removeItem('newScene') //remove saved scene
-  //   console.log("Saved Scene: " + currentScene)
-  //   reload();
-
-
-  // }else {
-
-  //   var fav = localStorage.removeItem('pinScene') //remove saved scene
-  //   console.log("Unpinned from scene")
-
-  // }
+        hostDiv.appendChild(maxaLogo);  
 
  
 
-  // }
 
-  // //reload function
-  // function reload() {
-  //   reload = location.reload();
-  //   }
-
-    // var label = document.createElement('LABEL')
-    // label.style.position= 'absolute';
-    // label.style.left= '95%';
-    // label.style.top= '0%';
-    // document.body.appendChild(label);
-
-      // //dealing with Pin icon
-      // var pinIcon = document.createElement("img");
-      // pinIcon.setAttribute('type', 'image');
-      // pinIcon.setAttribute('id',   'myPin');
-      // pinIcon.style.left= "100%";
-      // pinIcon.style.top= '10.5%'
-      // pinIcon.style.position= 'absolute';
-      // if(fave == null){ //checking if already saved
-      
-      // //unpin icon
-      // pinIcon.style.width = "30px";
-      // pinIcon.style.height = "30px";
-      // pinIcon.src= "../textures/tack.png";
-      // pinIcon.title = "Pin this Scene"; //Tooltip
-      // var pin = true;
-      
-  
-      // }else {
-  
-      //   //pinned icon
-      // pinIcon.src= "../textures/pin.png";
-      // pinIcon.style.width = "30px";
-      // pinIcon.style.height = "30px";
-      // pinIcon.title = "Unpin this Scene"; //Tooltip
-  
-      // var pin = false;
-  
-  
-  
-      // }
-      // pinIcon.onclick = function (){
-  
-      //   selectScene();
-  
-  
-      // }
-      // pinIcon.onmouseover = function () {
-  
-      // if(fave == null){
-  
-      // pinIcon.style.width = "35px";
-      // pinIcon.style.height = "35px";
-  
-  
-  
-      // }
-  
-      // }
-      // pinIcon.onmouseleave = function (){
-      
-      // if(fave == null){
-  
-      // pinIcon.style.width = "30px";
-      // pinIcon.style.height = "30px";
-  
-  
-  
-      // }
-  
-      // }
-      // label.appendChild(pinIcon); 
 
 
 }
@@ -849,22 +738,6 @@ class Button {
     this.name.src= srcDafault;
     this.name.title = this.tl; //Tooltip
     this.div.appendChild(this.name); 
-    // document.body.appendChild(this.name); 
-    // if(id == 'Credits'){
-
-    //   $('Credits').append(this.div);
-     
-
-    // }
-    
-    // var n = this.name;
-    // var creditButton;
-    // if(n === creditButton){
-
-    // $('Credits').append(this.div);
-
-    // console.log("JINXXXXXXXXXX")
-    // }
 
 
     }else{
@@ -874,46 +747,35 @@ class Button {
 
   
   }
-  action(srcOnOver, srcOnLeave){
+  click(tag, alert, Link, src1, src2, src3, textTop){
+ 
+    var l1 = src1
+    var l2 = src2
+    var l3 = src3
 
 
-    if(this.active === true){
-
-      
-     this.name.onmouseleave = function (){
-      this.src = srcOnLeave;
-      this.style.width = "35px";
-      this.style.height = "35px"; 
-    }
-    this.name.onmouseover = function (){
-      this.src = srcOnOver;
-      this.style.width = "40px";
-      this.style.height = "40px"; 
-    } 
-
-    }else{
-      
-
-    }
-
-  }
-  click(name, alert, Link, sg, textTop){
-   
-    // var embedButton;
-    // var funButton;
 
     if(this.active === true){
 
-      switch (name) {
+      switch (tag) {
       
         case "embedButton":
     
-        
+        this.name.onmouseleave = function (){
+            this.src = l2;
+            this.style.width = "35px";
+            this.style.height = "35px"; 
+        }
+        this.name.onmouseover = function (){
+            this.src = l1;
+            this.style.width = "40px";
+            this.style.height = "40px"; 
+        } 
         this.name.onclick = function (){
-        this.src= sg;
-        embedText.style.display= 'flex';
-        setClipboard(Link)
-        window.alert(alert)
+          this.src= l3;
+          embedText.style.display= 'flex';
+          setClipboard(Link)
+          window.alert(alert)
        
         
       
@@ -923,7 +785,7 @@ class Button {
           
           } , 1500);
       
-    }
+        }
           
       
           //copy text to clipboard
@@ -948,81 +810,195 @@ class Button {
             var embedText = document.createElement("h6"); 
             var newContent = document.createTextNode("Link Copied"); 
             embedText.appendChild(newContent);
-            embedText.style.position= 'absolute';
+            embedText.style.position= 'relative';
             // embedText.style.width = "100%"
             embedText.style.display= 'none';
             embedText.style.color = "white"
-            embedText.style.left= "0%" ;
-            embedText.style.top= textTop;  
+            embedText.style.left= "100%" ;
+            embedText.style.top = textTop;  
             this.div.appendChild(embedText);
       
     
             break;
-        case "shareButton":
-
-          break;
-          case "shareButton":
+        case "pinScene":
+          var checkpin = true;
 
 
-          break;
-          default:
-            break;
-      }
-  
-  
-
-    }else{
-      
-
-    }
-
-
-  }
-  Attributes(name){
-
-    var delay = 10000;
-  
-    if(this.active === true){
-
-      switch (name) {
-      
-      case "creditButton":
-      
-      $(document).ready(function() {
-
-      $("#Credits").hover(function () {
-          
-          //on hover
-          $("#info").show();
-          
-          
-        }, function () {
-          
-          //when you leave
+        this.name.onmouseleave = function (){
+          this.name.src = src3;
+            this.style.width = "35px";
+            this.style.height = "35px"; 
+        }
+        this.name.onmouseover = function (){
+            this.name.src = src1;
+            this.style.width = "40px";
+            this.style.height = "40px"; 
+        } 
+        this.name.onclick = function (){
          
+          selectScene()
 
-          setTimeout(function () {
-            $("#info").hide();
-            } , delay);
-          
+          // if(fave == null){
+          //   this.name.src = src2;
+          //   checkpin = false;
+          //   console.log("this is null")
+            
+          //  }else{
+ 
+          //   this.name.src = src3;
+          //     checkpin = true;
+          //     console.log("this is filled")
+ 
+          //  }
+
+
+      
 
         }
-      );
-
-      })
-      
     
-            break;
-      case "shareButton":
+
+   var fave = localStorage.getItem('pinScene'); //favourite/pinned scene
+           // function for pin/unpinning scenes
+  function selectScene() {
+
+    //Condition to switch icons
+  if (fave == null){ 
+    
+    var currentScene = localStorage.getItem('newScene'); //get current scene
+    var fav = localStorage.setItem('pinScene', currentScene) //save it to storage
+   // var farev = localStorage.removeItem('newScene') //remove saved scene
+    console.log("Saved Scene: " + currentScene)
+    // checkpin == true
+    reload();
+
+    var a = "Current Scene Pinned😻";
+    window.alert(a)
+    
+
+  }else {
+    
+    // reload();
+    var fav = localStorage.removeItem('pinScene') //remove saved scene
+    console.log("Unpinned from scene")
+    reload();
+    var a = "Current Scene Unpinned! Enjoy the Experience 💃 "; 
+
+    window.alert(a)
+   
+  }
+
+ 
+
+  }
+
+  //reload function
+  function reload() {
+    reload = location.reload();
+    }
+
 
           break;
-      case "shareButton":
+        case "shareButton":
 
+        this.name.onmouseleave = function (){
+            this.src = l2;
+            this.style.width = "35px";
+            this.style.height = "35px"; 
+          }
+        this.name.onmouseover = function (){
+            this.src = l1;
+            this.style.width = "40px";
+            this.style.height = "40px"; 
+          } 
+        this.name.onclick = function (){
+        this.src= l3;
+        
+
+        }
 
           break;
-      default:
-            break;
+        case "creditButton":
+      var delay = 10000;
+                      
+      $(document).ready(function() {
 
+        $("#Credits").hover(function () {
+            
+            //on hover
+            $("#info").show();
+            this.src = l1;
+            this.style.width = "40px";
+            this.style.height = "40px"; 
+            
+            
+          }, function () {
+            
+            //when you leave
+            this.src = l2;
+            this.style.width = "35px";
+            this.style.height = "35px"; 
+  
+            setTimeout(function () {
+              $("#info").hide();
+              } , delay);
+            
+  
+          }
+        );
+
+        $("#Credits").mousedown(function () { 
+          this.src= l3;
+          console.log("clicked")
+        });
+  
+        })
+        
+    
+              break;
+        case "funButton":
+
+            this.name.onmouseleave = function (){
+                this.src = l2;
+                this.style.width = "35px";
+                this.style.height = "35px"; 
+              }
+            this.name.onmouseover = function (){
+                this.src = l1;
+                this.style.width = "40px";
+                this.style.height = "40px"; 
+              } 
+            this.name.onclick = function (){
+            this.src= l3;
+            
+    
+            }
+    
+              break;
+        case "funButton":
+
+                this.name.onmouseleave = function (){
+                    this.src = l2;
+                    this.style.width = "35px";
+                    this.style.height = "35px"; 
+                  }
+                this.name.onmouseover = function (){
+                    this.src = l1;
+                    this.style.width = "40px";
+                    this.style.height = "40px"; 
+                  } 
+                this.name.onclick = function (){
+                this.src= l3;
+                
+        
+                }
+        
+                  break;
+              
+               
+        
+          default:
+            
+            break;
       }
   
   
@@ -1032,11 +1008,110 @@ class Button {
 
     }
 
+
   }
+ 
 
 }
 
 
+ 
+
+  // // function for pin/unpinning scenes
+  // function selectScene() {
+
+  //   //Condition to switch icons
+  // if (fave == null){
+    
+  //   var currentScene = localStorage.getItem('newScene'); //get current scene
+  //   var fav = localStorage.setItem('pinScene', currentScene) //save it to storage
+  //  // var farev = localStorage.removeItem('newScene') //remove saved scene
+  //   console.log("Saved Scene: " + currentScene)
+  //   reload();
 
 
+  // }else {
+    
+  //   // reload();
+  //   var fav = localStorage.removeItem('pinScene') //remove saved scene
+  //   console.log("Unpinned from scene")
+
+  // }
+
+ 
+
+  // }
+
+  // //reload function
+  // function reload() {
+  //   reload = location.reload();
+  //   }
+
+  //   var label = document.createElement('LABEL')
+  //   label.style.position= 'absolute';
+  //   label.style.left= '95%';
+  //   label.style.top= '0%';
+  //   document.body.appendChild(label);
+
+  //     //dealing with Pin icon
+  //     var pinIcon = document.createElement("img");
+  //     pinIcon.setAttribute('type', 'image');
+  //     pinIcon.setAttribute('id',   'myPin');
+  //     pinIcon.style.left= "100%";
+  //     pinIcon.style.top= '10.5%'
+  //     pinIcon.style.position= 'absolute';
+  //     if(fave == null){ //checking if already saved
+      
+  //     //unpin icon
+  //     pinIcon.style.width = "30px";
+  //     pinIcon.style.height = "30px";
+  //     pinIcon.src= "../textures/tack.png";
+  //     pinIcon.title = "Pin this Scene"; //Tooltip
+  //     var pin = true;
+      
+  
+  //     }else {
+  
+  //       //pinned icon
+  //     pinIcon.src= "../textures/pin.png";
+  //     pinIcon.style.width = "30px";
+  //     pinIcon.style.height = "30px";
+  //     pinIcon.title = "Unpin this Scene"; //Tooltip
+  
+  //     var pin = false;
+  
+  
+  
+  //     }
+  //     pinIcon.onclick = function (){
+  
+  //       selectScene();
+  
+  
+  //     }
+  //     pinIcon.onmouseover = function () {
+  
+  //     if(fave == null){
+  
+  //     pinIcon.style.width = "35px";
+  //     pinIcon.style.height = "35px";
+  
+  
+  
+  //     }
+  
+  //     }
+  //     pinIcon.onmouseleave = function (){
+      
+  //     if(fave == null){
+  
+  //     pinIcon.style.width = "30px";
+  //     pinIcon.style.height = "30px";
+  
+  
+  
+  //     }
+  
+  //     }
+  //     label.appendChild(pinIcon); 
 

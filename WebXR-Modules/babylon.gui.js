@@ -97,9 +97,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ({
 
 /***/ "../../node_modules/tslib/tslib.es6.js":
-/*!*****************************************************************!*\
-  !*** C:/Dev/Babylon/Babylon.js/node_modules/tslib/tslib.es6.js ***!
-  \*****************************************************************/
+/*!************************************************************************************!*\
+  !*** C:/Users/raweber/Documents/GitHub/Babylon.js/node_modules/tslib/tslib.es6.js ***!
+  \************************************************************************************/
 /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __spreadArray, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -582,21 +582,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
-* Class used to create texture to support 2D GUI elements
-* @see https://doc.babylonjs.com/how_to/gui
-*/
+ * Class used to create texture to support 2D GUI elements
+ * @see https://doc.babylonjs.com/how_to/gui
+ */
 var AdvancedDynamicTexture = /** @class */ (function (_super) {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"])(AdvancedDynamicTexture, _super);
     /**
-   * Creates a new AdvancedDynamicTexture
-   * @param name defines the name of the texture
-   * @param width defines the width of the texture
-   * @param height defines the height of the texture
-   * @param scene defines the hosting scene
-   * @param generateMipMaps defines a boolean indicating if mipmaps must be generated (false by default)
-   * @param samplingMode defines the texture sampling mode (Texture.NEAREST_SAMPLINGMODE by default)
-   * @param invertY defines if the texture needs to be inverted on the y axis during loading (true by default)
-   */
+     * Creates a new AdvancedDynamicTexture
+     * @param name defines the name of the texture
+     * @param width defines the width of the texture
+     * @param height defines the height of the texture
+     * @param scene defines the hosting scene
+     * @param generateMipMaps defines a boolean indicating if mipmaps must be generated (false by default)
+     * @param samplingMode defines the texture sampling mode (Texture.NEAREST_SAMPLINGMODE by default)
+     * @param invertY defines if the texture needs to be inverted on the y axis during loading (true by default)
+     */
     function AdvancedDynamicTexture(name, width, height, scene, generateMipMaps, samplingMode, invertY) {
         if (width === void 0) { width = 0; }
         if (height === void 0) { height = 0; }
@@ -630,37 +630,37 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         /** @hidden */
         _this._numRenderCalls = 0;
         /**
-        * Define type to string to ensure compatibility across browsers
-        * Safari doesn't support DataTransfer constructor
-        */
+         * Define type to string to ensure compatibility across browsers
+         * Safari doesn't support DataTransfer constructor
+         */
         _this._clipboardData = "";
         /**
-        * Observable event triggered each time an clipboard event is received from the rendering canvas
-        */
+         * Observable event triggered each time an clipboard event is received from the rendering canvas
+         */
         _this.onClipboardObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * Observable event triggered each time a pointer down is intercepted by a control
-        */
+         * Observable event triggered each time a pointer down is intercepted by a control
+         */
         _this.onControlPickedObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * Observable event triggered before layout is evaluated
-        */
+         * Observable event triggered before layout is evaluated
+         */
         _this.onBeginLayoutObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * Observable event triggered after the layout was evaluated
-        */
+         * Observable event triggered after the layout was evaluated
+         */
         _this.onEndLayoutObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * Observable event triggered before the texture is rendered
-        */
+         * Observable event triggered before the texture is rendered
+         */
         _this.onBeginRenderObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * Observable event triggered after the texture was rendered
-        */
+         * Observable event triggered after the texture was rendered
+         */
         _this.onEndRenderObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * Gets or sets a boolean defining if alpha is stored as premultiplied
-        */
+         * Gets or sets a boolean defining if alpha is stored as premultiplied
+         */
         _this.premulAlpha = false;
         /**
          * Gets or sets a boolean indicating that the canvas must be reverted on Y when updating the texture
@@ -734,9 +734,9 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     });
     Object.defineProperty(AdvancedDynamicTexture.prototype, "renderScale", {
         /**
-        * Gets or sets a number used to scale rendering size (2 means that the texture will be twice bigger).
-        * Useful when you want more antialiasing
-        */
+         * Gets or sets a number used to scale rendering size (2 means that the texture will be twice bigger).
+         * Useful when you want more antialiasing
+         */
         get: function () {
             return this._renderScale;
         },
@@ -767,10 +767,10 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     });
     Object.defineProperty(AdvancedDynamicTexture.prototype, "idealWidth", {
         /**
-        * Gets or sets the ideal width used to design controls.
-        * The GUI will then rescale everything accordingly
-        * @see https://doc.babylonjs.com/how_to/gui#adaptive-scaling
-        */
+         * Gets or sets the ideal width used to design controls.
+         * The GUI will then rescale everything accordingly
+         * @see https://doc.babylonjs.com/how_to/gui#adaptive-scaling
+         */
         get: function () {
             return this._idealWidth;
         },
@@ -787,10 +787,10 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     });
     Object.defineProperty(AdvancedDynamicTexture.prototype, "idealHeight", {
         /**
-        * Gets or sets the ideal height used to design controls.
-        * The GUI will then rescale everything accordingly
-        * @see https://doc.babylonjs.com/how_to/gui#adaptive-scaling
-        */
+         * Gets or sets the ideal height used to design controls.
+         * The GUI will then rescale everything accordingly
+         * @see https://doc.babylonjs.com/how_to/gui#adaptive-scaling
+         */
         get: function () {
             return this._idealHeight;
         },
@@ -807,9 +807,9 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     });
     Object.defineProperty(AdvancedDynamicTexture.prototype, "useSmallestIdeal", {
         /**
-        * Gets or sets a boolean indicating if the smallest ideal value must be used if idealWidth and idealHeight are both set
-        * @see https://doc.babylonjs.com/how_to/gui#adaptive-scaling
-        */
+         * Gets or sets a boolean indicating if the smallest ideal value must be used if idealWidth and idealHeight are both set
+         * @see https://doc.babylonjs.com/how_to/gui#adaptive-scaling
+         */
         get: function () {
             return this._useSmallestIdeal;
         },
@@ -826,9 +826,9 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     });
     Object.defineProperty(AdvancedDynamicTexture.prototype, "renderAtIdealSize", {
         /**
-        * Gets or sets a boolean indicating if adaptive scaling must be used
-        * @see https://doc.babylonjs.com/how_to/gui#adaptive-scaling
-        */
+         * Gets or sets a boolean indicating if adaptive scaling must be used
+         * @see https://doc.babylonjs.com/how_to/gui#adaptive-scaling
+         */
         get: function () {
             return this._renderAtIdealSize;
         },
@@ -845,24 +845,26 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     Object.defineProperty(AdvancedDynamicTexture.prototype, "idealRatio", {
         /**
          * Gets the ratio used when in "ideal mode"
-        * @see https://doc.babylonjs.com/how_to/gui#adaptive-scaling
+         * @see https://doc.babylonjs.com/how_to/gui#adaptive-scaling
          * */
         get: function () {
             var rwidth = 0;
             var rheight = 0;
             if (this._idealWidth) {
-                rwidth = (this.getSize().width) / this._idealWidth;
+                rwidth = this.getSize().width / this._idealWidth;
             }
             if (this._idealHeight) {
-                rheight = (this.getSize().height) / this._idealHeight;
+                rheight = this.getSize().height / this._idealHeight;
             }
             if (this._useSmallestIdeal && this._idealWidth && this._idealHeight) {
                 return window.innerWidth < window.innerHeight ? rwidth : rheight;
             }
-            if (this._idealWidth) { // horizontal
+            if (this._idealWidth) {
+                // horizontal
                 return rwidth;
             }
-            if (this._idealHeight) { // vertical
+            if (this._idealHeight) {
+                // vertical
                 return rheight;
             }
             return 1;
@@ -872,8 +874,8 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     });
     Object.defineProperty(AdvancedDynamicTexture.prototype, "layer", {
         /**
-        * Gets the underlying layer used to render the texture when in fullscreen mode
-        */
+         * Gets the underlying layer used to render the texture when in fullscreen mode
+         */
         get: function () {
             return this._layerToDispose;
         },
@@ -882,8 +884,8 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     });
     Object.defineProperty(AdvancedDynamicTexture.prototype, "rootContainer", {
         /**
-        * Gets the root container control
-        */
+         * Gets the root container control
+         */
         get: function () {
             return this._rootContainer;
         },
@@ -891,27 +893,35 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         configurable: true
     });
     /**
-    * Returns an array containing the root container.
-    * This is mostly used to let the Inspector introspects the ADT
-    * @returns an array containing the rootContainer
-    */
+     * Returns an array containing the root container.
+     * This is mostly used to let the Inspector introspects the ADT
+     * @returns an array containing the rootContainer
+     */
     AdvancedDynamicTexture.prototype.getChildren = function () {
         return [this._rootContainer];
     };
     /**
-    * Will return all controls that are inside this texture
-    * @param directDescendantsOnly defines if true only direct descendants of 'this' will be considered, if false direct and also indirect (children of children, an so on in a recursive manner) descendants of 'this' will be considered
-    * @param predicate defines an optional predicate that will be called on every evaluated child, the predicate must return true for a given child to be part of the result, otherwise it will be ignored
-    * @return all child controls
-    */
+     * Will return all controls that are inside this texture
+     * @param directDescendantsOnly defines if true only direct descendants of 'this' will be considered, if false direct and also indirect (children of children, an so on in a recursive manner) descendants of 'this' will be considered
+     * @param predicate defines an optional predicate that will be called on every evaluated child, the predicate must return true for a given child to be part of the result, otherwise it will be ignored
+     * @return all child controls
+     */
     AdvancedDynamicTexture.prototype.getDescendants = function (directDescendantsOnly, predicate) {
         return this._rootContainer.getDescendants(directDescendantsOnly, predicate);
     };
     /**
-    * Will return the first control with the given name
-    * @param name defines the name to search for
-    * @return the first control found or null
-    */
+     * Will return all controls with the given type name
+     * @param typeName defines the type name to search for
+     * @returns an array of all controls found
+     */
+    AdvancedDynamicTexture.prototype.getControlsByType = function (typeName) {
+        return this._rootContainer.getDescendants(false, function (control) { return control.typeName === typeName; });
+    };
+    /**
+     * Will return the first control with the given name
+     * @param name defines the name to search for
+     * @return the first control found or null
+     */
     AdvancedDynamicTexture.prototype.getControlByName = function (name) {
         return this._getControlByKey("name", name);
     };
@@ -920,8 +930,8 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     };
     Object.defineProperty(AdvancedDynamicTexture.prototype, "focusedControl", {
         /**
-        * Gets or sets the current focused control
-        */
+         * Gets or sets the current focused control
+         */
         get: function () {
             return this._focusedControl;
         },
@@ -942,13 +952,13 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     });
     Object.defineProperty(AdvancedDynamicTexture.prototype, "isForeground", {
         /**
-        * Gets or sets a boolean indicating if the texture must be rendered in background or foreground when in fullscreen mode
-        */
+         * Gets or sets a boolean indicating if the texture must be rendered in background or foreground when in fullscreen mode
+         */
         get: function () {
             if (!this.layer) {
                 return true;
             }
-            return (!this.layer.isBackground);
+            return !this.layer.isBackground;
         },
         set: function (value) {
             if (!this.layer) {
@@ -964,8 +974,8 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     });
     Object.defineProperty(AdvancedDynamicTexture.prototype, "clipboardData", {
         /**
-        * Gets or set information about clipboardData
-        */
+         * Gets or set information about clipboardData
+         */
         get: function () {
             return this._clipboardData;
         },
@@ -976,17 +986,17 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         configurable: true
     });
     /**
-    * Get the current class name of the texture useful for serialization or dynamic coding.
-    * @returns "AdvancedDynamicTexture"
-    */
+     * Get the current class name of the texture useful for serialization or dynamic coding.
+     * @returns "AdvancedDynamicTexture"
+     */
     AdvancedDynamicTexture.prototype.getClassName = function () {
         return "AdvancedDynamicTexture";
     };
     /**
-    * Function used to execute a function on all controls
-    * @param func defines the function to execute
-    * @param container defines the container where controls belong. If null the root container will be used
-    */
+     * Function used to execute a function on all controls
+     * @param func defines the function to execute
+     * @param container defines the container where controls belong. If null the root container will be used
+     */
     AdvancedDynamicTexture.prototype.executeOnAllControls = function (func, container) {
         if (!container) {
             container = this._rootContainer;
@@ -1039,40 +1049,83 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         }
     };
     /**
-    * Marks the texture as dirty forcing a complete update
-    */
+     * Marks the texture as dirty forcing a complete update
+     */
     AdvancedDynamicTexture.prototype.markAsDirty = function () {
         this._isDirty = true;
     };
     /**
-    * Helper function used to create a new style
-    * @returns a new style
-    * @see https://doc.babylonjs.com/how_to/gui#styles
-    */
+     * Helper function used to create a new style
+     * @returns a new style
+     * @see https://doc.babylonjs.com/how_to/gui#styles
+     */
     AdvancedDynamicTexture.prototype.createStyle = function () {
         return new _style__WEBPACK_IMPORTED_MODULE_4__["Style"](this);
     };
     /**
-    * Adds a new control to the root container
-    * @param control defines the control to add
-    * @returns the current texture
-    */
+     * Adds a new control to the root container
+     * @param control defines the control to add
+     * @returns the current texture
+     */
     AdvancedDynamicTexture.prototype.addControl = function (control) {
         this._rootContainer.addControl(control);
         return this;
     };
     /**
-    * Removes a control from the root container
-    * @param control defines the control to remove
-    * @returns the current texture
-    */
+     * Removes a control from the root container
+     * @param control defines the control to remove
+     * @returns the current texture
+     */
     AdvancedDynamicTexture.prototype.removeControl = function (control) {
         this._rootContainer.removeControl(control);
         return this;
     };
     /**
-    * Release all resources
-    */
+     * Moves overlapped controls towards a position where it is not overlapping anymore.
+     * Please note that this method alters linkOffsetXInPixels and linkOffsetYInPixels.
+     * @param overlapGroup the overlap group which will be processed or undefined to process all overlap groups
+     * @param deltaStep the step size (speed) to reach the target non overlapping position (default 0.1)
+     * @param repelFactor how much is the control repelled by other controls
+     */
+    AdvancedDynamicTexture.prototype.moveToNonOverlappedPosition = function (overlapGroup, deltaStep, repelFactor) {
+        if (deltaStep === void 0) { deltaStep = 1; }
+        if (repelFactor === void 0) { repelFactor = 1; }
+        var controlsForGroup;
+        if (Array.isArray(overlapGroup)) {
+            controlsForGroup = overlapGroup;
+        }
+        else {
+            var descendants = this.getDescendants(true);
+            // get only the controls with an overlapGroup property set
+            // if the overlapGroup parameter is set, filter the controls and get only the controls belonging to that overlapGroup
+            controlsForGroup = overlapGroup === undefined ? descendants.filter(function (c) { return c.overlapGroup !== undefined; }) : descendants.filter(function (c) { return c.overlapGroup === overlapGroup; });
+        }
+        controlsForGroup.forEach(function (control1) {
+            var _a;
+            var velocity = babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Vector2"].Zero();
+            var center = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Vector2"](control1.centerX, control1.centerY);
+            controlsForGroup.forEach(function (control2) {
+                if (control1 !== control2 && AdvancedDynamicTexture._Overlaps(control1, control2)) {
+                    // if the two controls overlaps get a direction vector from one control's center to another control's center
+                    var diff = center.subtract(new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Vector2"](control2.centerX, control2.centerY));
+                    var diffLength = diff.length();
+                    if (diffLength > 0) {
+                        // calculate the velocity
+                        velocity = velocity.add(diff.normalize().scale(repelFactor / diffLength));
+                    }
+                }
+            });
+            if (velocity.length() > 0) {
+                // move the control along the direction vector away from the overlapping control
+                velocity = velocity.normalize().scale(deltaStep * ((_a = control1.overlapDeltaMultiplier) !== null && _a !== void 0 ? _a : 1));
+                control1.linkOffsetXInPixels += velocity.x;
+                control1.linkOffsetYInPixels += velocity.y;
+            }
+        });
+    };
+    /**
+     * Release all resources
+     */
     AdvancedDynamicTexture.prototype.dispose = function () {
         var scene = this.getScene();
         if (!scene) {
@@ -1147,21 +1200,21 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         return this._fullscreenViewport.toGlobal(size.width, size.height);
     };
     /**
-    * Get screen coordinates for a vector3
-    * @param position defines the position to project
-    * @param worldMatrix defines the world matrix to use
-    * @returns the projected position
-    */
+     * Get screen coordinates for a vector3
+     * @param position defines the position to project
+     * @param worldMatrix defines the world matrix to use
+     * @returns the projected position
+     */
     AdvancedDynamicTexture.prototype.getProjectedPosition = function (position, worldMatrix) {
         var result = this.getProjectedPositionWithZ(position, worldMatrix);
         return new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Vector2"](result.x, result.y);
     };
     /**
-    * Get screen coordinates for a vector3
-    * @param position defines the position to project
-    * @param worldMatrix defines the world matrix to use
-    * @returns the projected position with Z
-    */
+     * Get screen coordinates for a vector3
+     * @param position defines the position to project
+     * @param worldMatrix defines the world matrix to use
+     * @returns the projected position with Z
+     */
     AdvancedDynamicTexture.prototype.getProjectedPositionWithZ = function (position, worldMatrix) {
         var scene = this.getScene();
         if (!scene) {
@@ -1213,7 +1266,7 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         }
         this._isDirty = false;
         this._render();
-        this.update(this.applyYInversionOnUpdate, this.premulAlpha);
+        this.update(this.applyYInversionOnUpdate, this.premulAlpha, AdvancedDynamicTexture.AllowGPUOptimizations);
     };
     AdvancedDynamicTexture.prototype._render = function () {
         var textureSize = this.getSize();
@@ -1325,13 +1378,13 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         }
         var tempViewport = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Viewport"](0, 0, 0, 0);
         this._pointerMoveObserver = scene.onPrePointerObservable.add(function (pi, state) {
-            if (scene.isPointerCaptured((pi.event).pointerId)) {
+            if (scene.isPointerCaptured(pi.event.pointerId)) {
                 return;
             }
-            if (pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERMOVE
-                && pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERUP
-                && pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERDOWN
-                && pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERWHEEL) {
+            if (pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERMOVE &&
+                pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERUP &&
+                pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERDOWN &&
+                pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERWHEEL) {
                 return;
             }
             if (pi.type === babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERMOVE && pi.event.pointerId) {
@@ -1363,8 +1416,8 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         this._attachToOnBlur(scene);
     };
     /**
-    * Register the clipboard Events onto the canvas
-    */
+     * Register the clipboard Events onto the canvas
+     */
     AdvancedDynamicTexture.prototype.registerClipboardEvents = function () {
         self.addEventListener("copy", this.onClipboardCopy, false);
         self.addEventListener("cut", this.onClipboardCut, false);
@@ -1379,10 +1432,10 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         self.removeEventListener("paste", this.onClipboardPaste);
     };
     /**
-    * Connect the texture to a hosting mesh to enable interactions
-    * @param mesh defines the mesh to attach to
-    * @param supportPointerMove defines a boolean indicating if pointer move events must be catched as well
-    */
+     * Connect the texture to a hosting mesh to enable interactions
+     * @param mesh defines the mesh to attach to
+     * @param supportPointerMove defines a boolean indicating if pointer move events must be catched as well
+     */
     AdvancedDynamicTexture.prototype.attachToMesh = function (mesh, supportPointerMove) {
         var _this = this;
         if (supportPointerMove === void 0) { supportPointerMove = true; }
@@ -1391,10 +1444,10 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
             return;
         }
         this._pointerObserver = scene.onPointerObservable.add(function (pi, state) {
-            if (pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERMOVE
-                && pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERUP
-                && pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERDOWN
-                && pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERWHEEL) {
+            if (pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERMOVE &&
+                pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERUP &&
+                pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERDOWN &&
+                pi.type !== babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERWHEEL) {
                 return;
             }
             if (pi.type === babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERMOVE && pi.event.pointerId) {
@@ -1405,7 +1458,7 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
                 var uv = pi.pickInfo.getTextureCoordinates();
                 if (uv) {
                     var size = _this.getSize();
-                    _this._doPicking(uv.x * size.width, (_this.applyYInversionOnUpdate ? (1.0 - uv.y) : uv.y) * size.height, pi, pi.type, pointerId, pi.event.button, pi.event.deltaX, pi.event.deltaY);
+                    _this._doPicking(uv.x * size.width, (_this.applyYInversionOnUpdate ? 1.0 - uv.y : uv.y) * size.height, pi, pi.type, pointerId, pi.event.button, pi.event.deltaX, pi.event.deltaY);
                 }
             }
             else if (pi.type === babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["PointerEventTypes"].POINTERUP) {
@@ -1448,9 +1501,9 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         this._attachToOnBlur(scene);
     };
     /**
-    * Move the focus to a specific control
-    * @param control defines the control which will receive the focus
-    */
+     * Move the focus to a specific control
+     * @param control defines the control which will receive the focus
+     */
     AdvancedDynamicTexture.prototype.moveFocusToControl = function (control) {
         this.focusedControl = control;
         this._lastPickedControl = control;
@@ -1513,21 +1566,25 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     /**
      * Recreate the content of the ADT from a JSON object
      * @param serializedObject define the JSON serialized object to restore from
+     * @param scaleToSize defines whether to scale to texture to the saved size
      */
-    AdvancedDynamicTexture.prototype.parseContent = function (serializedObject) {
+    AdvancedDynamicTexture.prototype.parseContent = function (serializedObject, scaleToSize) {
         this._rootContainer = _controls_control__WEBPACK_IMPORTED_MODULE_3__["Control"].Parse(serializedObject.root, this);
-        var width = serializedObject.width;
-        var height = serializedObject.height;
-        if (typeof (width) === "number" && typeof (height) === "number" && width >= 0 && height >= 0) {
-            this.scaleTo(width, height);
+        if (scaleToSize) {
+            var width = serializedObject.width;
+            var height = serializedObject.height;
+            if (typeof width === "number" && typeof height === "number" && width >= 0 && height >= 0) {
+                this.scaleTo(width, height);
+            }
         }
     };
     /**
      * Recreate the content of the ADT from a snippet saved by the GUI editor
      * @param snippetId defines the snippet to load
+     * @param scaleToSize defines whether to scale to texture to the saved size
      * @returns a promise that will resolve on success
      */
-    AdvancedDynamicTexture.prototype.parseFromSnippetAsync = function (snippetId) {
+    AdvancedDynamicTexture.prototype.parseFromSnippetAsync = function (snippetId, scaleToSize) {
         var _this = this;
         if (snippetId === "_BLANK") {
             return Promise.resolve();
@@ -1539,7 +1596,7 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
                     if (request.status == 200) {
                         var snippet = JSON.parse(JSON.parse(request.responseText).jsonPayload);
                         var serializationObject = JSON.parse(snippet.gui);
-                        _this.parseContent(serializationObject);
+                        _this.parseContent(serializationObject, scaleToSize);
                         _this.snippetId = snippetId;
                         resolve();
                     }
@@ -1553,11 +1610,12 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         });
     };
     /**
-    * Recreate the content of the ADT from a url json
-    * @param url defines the url to load
-    * @returns a promise that will resolve on success
-    */
-    AdvancedDynamicTexture.prototype.parseFromURLAsync = function (url) {
+     * Recreate the content of the ADT from a url json
+     * @param url defines the url to load
+     * @param scaleToSize defines whether to scale to texture to the saved size
+     * @returns a promise that will resolve on success
+     */
+    AdvancedDynamicTexture.prototype.parseFromURLAsync = function (url, scaleToSize) {
         var _this = this;
         if (url === "") {
             return Promise.resolve();
@@ -1569,7 +1627,7 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
                     if (request.status == 200) {
                         var gui = request.responseText;
                         var serializationObject = JSON.parse(gui);
-                        _this.parseContent(serializationObject);
+                        _this.parseContent(serializationObject, scaleToSize);
                         resolve();
                     }
                     else {
@@ -1582,6 +1640,18 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         });
     };
     // Statics
+    /**
+     * Compares two rectangle based controls for pixel overlap
+     * @param control1 The first control to compare
+     * @param control2 The second control to compare
+     * @returns true if overlaps, otherwise false
+     */
+    AdvancedDynamicTexture._Overlaps = function (control1, control2) {
+        return !(control1.centerX > control2.centerX + control2.widthInPixels ||
+            control1.centerX + control1.widthInPixels < control2.centerX ||
+            control1.centerY + control1.heightInPixels < control2.centerY ||
+            control1.centerY > control2.centerY + control2.heightInPixels);
+    };
     /**
      * Creates a new AdvancedDynamicTexture in projected mode (ie. attached to a mesh)
      * @param mesh defines the mesh which will receive the texture
@@ -1633,17 +1703,17 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
         return result;
     };
     /**
-    * Creates a new AdvancedDynamicTexture in fullscreen mode.
-    * In this mode the texture will rely on a layer for its rendering.
-    * This allows it to be treated like any other layer.
-    * As such, if you have a multi camera setup, you can set the layerMask on the GUI as well.
-    * LayerMask is set through advancedTexture.layer.layerMask
-    * @param name defines name for the texture
-    * @param foreground defines a boolean indicating if the texture must be rendered in foreground (default is true)
-    * @param scene defines the hosting scene
-    * @param sampling defines the texture sampling mode (Texture.BILINEAR_SAMPLINGMODE by default)
-    * @returns a new AdvancedDynamicTexture
-    */
+     * Creates a new AdvancedDynamicTexture in fullscreen mode.
+     * In this mode the texture will rely on a layer for its rendering.
+     * This allows it to be treated like any other layer.
+     * As such, if you have a multi camera setup, you can set the layerMask on the GUI as well.
+     * LayerMask is set through advancedTexture.layer.layerMask
+     * @param name defines name for the texture
+     * @param foreground defines a boolean indicating if the texture must be rendered in foreground (default is true)
+     * @param scene defines the hosting scene
+     * @param sampling defines the texture sampling mode (Texture.BILINEAR_SAMPLINGMODE by default)
+     * @returns a new AdvancedDynamicTexture
+     */
     AdvancedDynamicTexture.CreateFullscreenUI = function (name, foreground, scene, sampling) {
         if (foreground === void 0) { foreground = true; }
         if (scene === void 0) { scene = null; }
@@ -1660,6 +1730,8 @@ var AdvancedDynamicTexture = /** @class */ (function (_super) {
     };
     /** Define the Uurl to load snippets */
     AdvancedDynamicTexture.SnippetUrl = "https://snippet.babylonjs.com";
+    /** Indicates if some optimizations can be performed in GUI GPU management (the downside is additional memory/GPU texture memory used) */
+    AdvancedDynamicTexture.AllowGPUOptimizations = true;
     return AdvancedDynamicTexture;
 }(babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["DynamicTexture"]));
 
@@ -4163,6 +4235,8 @@ var Control = /** @class */ (function () {
         this._enterCount = -1;
         this._doNotRender = false;
         this._downPointerIds = {};
+        this._evaluatedMeasure = new _measure__WEBPACK_IMPORTED_MODULE_3__["Measure"](0, 0, 0, 0);
+        this._evaluatedParentMeasure = new _measure__WEBPACK_IMPORTED_MODULE_3__["Measure"](0, 0, 0, 0);
         this._isEnabled = true;
         this._disabledColor = "#9a9a9a";
         this._disabledColorItem = "#6a6a6a";
@@ -4203,7 +4277,7 @@ var Control = /** @class */ (function () {
         this._shadowOffsetY = 0;
         this._shadowBlur = 0;
         this._previousShadowBlur = 0;
-        this._shadowColor = 'black';
+        this._shadowColor = "black";
         /** Gets or sets the cursor to use when the control is hovered */
         this.hoverCursor = "";
         /** @hidden */
@@ -4211,36 +4285,36 @@ var Control = /** @class */ (function () {
         /** @hidden */
         this._linkOffsetY = new _valueAndUnit__WEBPACK_IMPORTED_MODULE_2__["ValueAndUnit"](0);
         /**
-        * An event triggered when pointer wheel is scrolled
-        */
+         * An event triggered when pointer wheel is scrolled
+         */
         this.onWheelObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * An event triggered when the pointer moves over the control.
-        */
+         * An event triggered when the pointer moves over the control.
+         */
         this.onPointerMoveObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * An event triggered when the pointer moves out of the control.
-        */
+         * An event triggered when the pointer moves out of the control.
+         */
         this.onPointerOutObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * An event triggered when the pointer taps the control
-        */
+         * An event triggered when the pointer taps the control
+         */
         this.onPointerDownObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * An event triggered when pointer up
-        */
+         * An event triggered when pointer up
+         */
         this.onPointerUpObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * An event triggered when a control is clicked on
-        */
+         * An event triggered when a control is clicked on
+         */
         this.onPointerClickObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * An event triggered when pointer enters the control
-        */
+         * An event triggered when pointer enters the control
+         */
         this.onPointerEnterObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * An event triggered when the control is marked as dirty
-        */
+         * An event triggered when the control is marked as dirty
+         */
         this.onDirtyObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
          * An event triggered before drawing the control
@@ -4251,8 +4325,8 @@ var Control = /** @class */ (function () {
          */
         this.onAfterDrawObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
-        * An event triggered when the control has been disposed
-        */
+         * An event triggered when the control has been disposed
+         */
         this.onDisposeObservable = new babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Observable"]();
         /**
          * Gets or sets a fixed ratio for this control.
@@ -4446,7 +4520,7 @@ var Control = /** @class */ (function () {
     Object.defineProperty(Control.prototype, "scaleX", {
         /** Gets or sets a value indicating the scale factor on X axis (1 by default)
          * @see https://doc.babylonjs.com/how_to/gui#rotation-and-scaling
-        */
+         */
         get: function () {
             return this._scaleX;
         },
@@ -4464,7 +4538,7 @@ var Control = /** @class */ (function () {
     Object.defineProperty(Control.prototype, "scaleY", {
         /** Gets or sets a value indicating the scale factor on Y axis (1 by default)
          * @see https://doc.babylonjs.com/how_to/gui#rotation-and-scaling
-        */
+         */
         get: function () {
             return this._scaleY;
         },
@@ -4482,7 +4556,7 @@ var Control = /** @class */ (function () {
     Object.defineProperty(Control.prototype, "rotation", {
         /** Gets or sets the rotation angle (0 by default)
          * @see https://doc.babylonjs.com/how_to/gui#rotation-and-scaling
-        */
+         */
         get: function () {
             return this._rotation;
         },
@@ -4500,7 +4574,7 @@ var Control = /** @class */ (function () {
     Object.defineProperty(Control.prototype, "transformCenterY", {
         /** Gets or sets the transformation center on Y axis (0 by default)
          * @see https://doc.babylonjs.com/how_to/gui#rotation-and-scaling
-        */
+         */
         get: function () {
             return this._transformCenterY;
         },
@@ -4518,7 +4592,7 @@ var Control = /** @class */ (function () {
     Object.defineProperty(Control.prototype, "transformCenterX", {
         /** Gets or sets the transformation center on X axis (0 by default)
          * @see https://doc.babylonjs.com/how_to/gui#rotation-and-scaling
-        */
+         */
         get: function () {
             return this._transformCenterX;
         },
@@ -5282,7 +5356,7 @@ var Control = /** @class */ (function () {
      * @see https://doc.babylonjs.com/how_to/gui#tracking-positions
      */
     Control.prototype.linkWithMesh = function (mesh) {
-        if (!this._host || this.parent && this.parent !== this._host._rootContainer) {
+        if (!this._host || (this.parent && this.parent !== this._host._rootContainer)) {
             if (mesh) {
                 babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["Tools"].Error("Cannot link a control to a mesh if the control is not at root level");
             }
@@ -5305,13 +5379,13 @@ var Control = /** @class */ (function () {
         this._host._linkedControls.push(this);
     };
     /**
-    * Shorthand funtion to set the top, right, bottom, and left padding values on the control.
-    * @param { string | number} paddingTop - The value of the top padding.
-    * @param { string | number} paddingRight - The value of the right padding. If omitted, top is used.
-    * @param { string | number} paddingBottom - The value of the bottom padding. If omitted, top is used.
-    * @param { string | number} paddingLeft - The value of the left padding. If omitted, right is used.
-    * @see https://doc.babylonjs.com/how_to/gui#position-and-size
-    */
+     * Shorthand funtion to set the top, right, bottom, and left padding values on the control.
+     * @param { string | number} paddingTop - The value of the top padding.
+     * @param { string | number} paddingRight - The value of the right padding. If omitted, top is used.
+     * @param { string | number} paddingBottom - The value of the bottom padding. If omitted, top is used.
+     * @param { string | number} paddingLeft - The value of the left padding. If omitted, right is used.
+     * @see https://doc.babylonjs.com/how_to/gui#position-and-size
+     */
     Control.prototype.setPadding = function (paddingTop, paddingRight, paddingBottom, paddingLeft) {
         var top = paddingTop;
         var right = paddingRight !== null && paddingRight !== void 0 ? paddingRight : top;
@@ -5351,8 +5425,8 @@ var Control = /** @class */ (function () {
                 this._processMeasures(parentMeasure, this._host.getContext());
             }
         }
-        var newLeft = ((projectedPosition.x + this._linkOffsetX.getValue(this._host)) - this._currentMeasure.width / 2);
-        var newTop = ((projectedPosition.y + this._linkOffsetY.getValue(this._host)) - this._currentMeasure.height / 2);
+        var newLeft = projectedPosition.x + this._linkOffsetX.getValue(this._host) - this._currentMeasure.width / 2;
+        var newTop = projectedPosition.y + this._linkOffsetY.getValue(this._host) - this._currentMeasure.height / 2;
         if (this._left.ignoreAdaptiveScaling && this._top.ignoreAdaptiveScaling) {
             if (Math.abs(newLeft - oldLeft) < 0.5) {
                 newLeft = oldLeft;
@@ -5405,6 +5479,14 @@ var Control = /** @class */ (function () {
         return true;
     };
     /** @hidden */
+    Control.prototype._computeAdditionnalOffsetX = function () {
+        return 0;
+    };
+    /** @hidden */
+    Control.prototype._computeAdditionnalOffsetY = function () {
+        return 0;
+    };
+    /** @hidden */
     Control.prototype.invalidateRect = function () {
         this._transform();
         if (this.host && this.host.useInvalidateRectOptimization) {
@@ -5421,7 +5503,9 @@ var Control = /** @class */ (function () {
             var rightShadowOffset = Math.max(Math.max(shadowOffsetX, 0) + shadowBlur * 2, 0);
             var topShadowOffset = Math.min(Math.min(shadowOffsetY, 0) - shadowBlur * 2, 0);
             var bottomShadowOffset = Math.max(Math.max(shadowOffsetY, 0) + shadowBlur * 2, 0);
-            this.host.invalidateRect(Math.floor(this._tmpMeasureA.left + leftShadowOffset), Math.floor(this._tmpMeasureA.top + topShadowOffset), Math.ceil(this._tmpMeasureA.left + this._tmpMeasureA.width + rightShadowOffset), Math.ceil(this._tmpMeasureA.top + this._tmpMeasureA.height + bottomShadowOffset));
+            var offsetX = this._computeAdditionnalOffsetX();
+            var offsetY = this._computeAdditionnalOffsetY();
+            this.host.invalidateRect(Math.floor(this._tmpMeasureA.left + leftShadowOffset - offsetX), Math.floor(this._tmpMeasureA.top + topShadowOffset - offsetY), Math.ceil(this._tmpMeasureA.left + this._tmpMeasureA.width + rightShadowOffset + offsetX), Math.ceil(this._tmpMeasureA.top + this._tmpMeasureA.height + bottomShadowOffset + offsetY));
         }
     };
     /** @hidden */
@@ -5511,7 +5595,7 @@ var Control = /** @class */ (function () {
             context.globalAlpha *= this._alpha;
         }
         else if (this._alphaSet) {
-            context.globalAlpha = (this.parent && !this.parent.renderToIntermediateTexture) ? this.parent.alpha * this._alpha : this._alpha;
+            context.globalAlpha = this.parent && !this.parent.renderToIntermediateTexture ? this.parent.alpha * this._alpha : this._alpha;
         }
     };
     /** @hidden */
@@ -5561,21 +5645,23 @@ var Control = /** @class */ (function () {
         }
     };
     Control.prototype._evaluateClippingState = function (parentMeasure) {
+        this._currentMeasure.transformToRef(this._transformMatrix, this._evaluatedMeasure);
         if (this.parent && this.parent.clipChildren) {
+            parentMeasure.transformToRef(this.parent._transformMatrix, this._evaluatedParentMeasure);
             // Early clip
-            if (this._currentMeasure.left > parentMeasure.left + parentMeasure.width) {
+            if (this._evaluatedMeasure.left > this._evaluatedParentMeasure.left + this._evaluatedParentMeasure.width) {
                 this._isClipped = true;
                 return;
             }
-            if (this._currentMeasure.left + this._currentMeasure.width < parentMeasure.left) {
+            if (this._evaluatedMeasure.left + this._evaluatedMeasure.width < this._evaluatedParentMeasure.left) {
                 this._isClipped = true;
                 return;
             }
-            if (this._currentMeasure.top > parentMeasure.top + parentMeasure.height) {
+            if (this._evaluatedMeasure.top > this._evaluatedParentMeasure.top + this._evaluatedParentMeasure.height) {
                 this._isClipped = true;
                 return;
             }
-            if (this._currentMeasure.top + this._currentMeasure.height < parentMeasure.top) {
+            if (this._evaluatedMeasure.top + this._evaluatedMeasure.height < this._evaluatedParentMeasure.top) {
                 this._isClipped = true;
                 return;
             }
@@ -5817,7 +5903,8 @@ var Control = /** @class */ (function () {
         if (this._enterCount > 0) {
             return false;
         }
-        if (this._enterCount === -1) { // -1 is for touch input, we are now sure we are with a mouse or pencil
+        if (this._enterCount === -1) {
+            // -1 is for touch input, we are now sure we are with a mouse or pencil
             this._enterCount = 0;
         }
         this._enterCount++;
@@ -5948,6 +6035,8 @@ var Control = /** @class */ (function () {
             this._font = this._fontStyle + " " + this._fontWeight + " " + this.fontSizeInPixels + "px " + this._fontFamily;
         }
         this._fontOffset = Control._GetFontOffset(this._font);
+        //children need to be refreshed
+        this.getDescendants().forEach(function (child) { return child._markAllAsDirty(); });
     };
     /**
      * Serializes the current control
@@ -6237,6 +6326,12 @@ var Control = /** @class */ (function () {
     Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         Object(babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["serialize"])()
     ], Control.prototype, "disabledColorItem", null);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["serialize"])()
+    ], Control.prototype, "overlapGroup", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+        Object(babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["serialize"])()
+    ], Control.prototype, "overlapDeltaMultiplier", void 0);
     return Control;
 }());
 
@@ -9200,7 +9295,7 @@ var InputText = /** @class */ (function (_super) {
             context.shadowOffsetX = 0;
             context.shadowOffsetY = 0;
         }
-        if (!this._fontOffset) {
+        if (!this._fontOffset || this._wasDirty) {
             this._fontOffset = _control__WEBPACK_IMPORTED_MODULE_2__["Control"]._GetFontOffset(context.font);
         }
         // Text
@@ -10300,6 +10395,22 @@ var Rectangle = /** @class */ (function (_super) {
     });
     Rectangle.prototype._getTypeName = function () {
         return "Rectangle";
+    };
+    /** @hidden */
+    Rectangle.prototype._computeAdditionnalOffsetX = function () {
+        if (this._cornerRadius) {
+            // Take in account the aliasing
+            return 1;
+        }
+        return 0;
+    };
+    /** @hidden */
+    Rectangle.prototype._computeAdditionnalOffsetY = function () {
+        if (this._cornerRadius) {
+            // Take in account the aliasing
+            return 1;
+        }
+        return 0;
     };
     Rectangle.prototype._localDraw = function (context) {
         context.save();
@@ -13905,7 +14016,7 @@ var TextBlock = /** @class */ (function (_super) {
         return "TextBlock";
     };
     TextBlock.prototype._processMeasures = function (parentMeasure, context) {
-        if (!this._fontOffset) {
+        if (!this._fontOffset || this.isDirty) {
             this._fontOffset = _control__WEBPACK_IMPORTED_MODULE_3__["Control"]._GetFontOffset(context.font);
         }
         _super.prototype._processMeasures.call(this, parentMeasure, context);
@@ -14386,26 +14497,6 @@ var ToggleButton = /** @class */ (function (_super) {
         };
         return _this;
     }
-    Object.defineProperty(ToggleButton.prototype, "image", {
-        /**
-         * Returns the ToggleButton's image control if it exists
-         */
-        get: function () {
-            return this._image;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(ToggleButton.prototype, "textBlock", {
-        /**
-         * Returns the ToggleButton's child TextBlock control if it exists
-         */
-        get: function () {
-            return this._textBlock;
-        },
-        enumerable: false,
-        configurable: true
-    });
     Object.defineProperty(ToggleButton.prototype, "group", {
         /** Gets or sets group name this toggle button belongs to */
         get: function () {
@@ -16420,7 +16511,7 @@ var Button3D = /** @class */ (function (_super) {
             faceUV[i] = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Vector4"](0, 0, 0, 0);
         }
         faceUV[1] = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Vector4"](0, 0, 1, 1);
-        var mesh = babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["BoxBuilder"].CreateBox(this.name + "_rootMesh", {
+        var mesh = Object(babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["CreateBox"])(this.name + "_rootMesh", {
             width: 1.0,
             height: 1.0,
             depth: 0.08,
@@ -17355,7 +17446,7 @@ var HolographicBackplate = /** @class */ (function (_super) {
     HolographicBackplate.prototype._createNode = function (scene) {
         var _this = this;
         var _a;
-        var collisionMesh = babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["BoxBuilder"].CreateBox(((_a = this.name) !== null && _a !== void 0 ? _a : "HolographicBackplate") + "_CollisionMesh", {
+        var collisionMesh = Object(babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["CreateBox"])(((_a = this.name) !== null && _a !== void 0 ? _a : "HolographicBackplate") + "_CollisionMesh", {
             width: 1.0,
             height: 1.0,
             depth: 1.0,
@@ -17530,8 +17621,8 @@ var HolographicButton = /** @class */ (function (_super) {
             }
             if (!this._tooltipFade) {
                 // Create tooltip with mesh and text
-                this._tooltipMesh = babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["PlaneBuilder"].CreatePlane("", { size: 1 }, this._backPlate._scene);
-                var tooltipBackground = babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["PlaneBuilder"].CreatePlane("", { size: 1, sideOrientation: babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["Mesh"].DOUBLESIDE }, this._backPlate._scene);
+                this._tooltipMesh = Object(babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["CreatePlane"])("", { size: 1 }, this._backPlate._scene);
+                var tooltipBackground = Object(babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["CreatePlane"])("", { size: 1, sideOrientation: babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["Mesh"].DOUBLESIDE }, this._backPlate._scene);
                 var mat = new babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["StandardMaterial"]("", this._backPlate._scene);
                 mat.diffuseColor = babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["Color3"].FromHexString("#212121");
                 tooltipBackground.material = mat;
@@ -17678,12 +17769,12 @@ var HolographicButton = /** @class */ (function (_super) {
     };
     // Mesh association
     HolographicButton.prototype._createNode = function (scene) {
-        this._backPlate = babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["BoxBuilder"].CreateBox(this.name + "BackMesh", {
+        this._backPlate = Object(babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["CreateBox"])(this.name + "BackMesh", {
             width: 1.0,
             height: 1.0,
             depth: 0.08
         }, scene);
-        this._frontPlate = babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["BoxBuilder"].CreateBox(this.name + "FrontMesh", {
+        this._frontPlate = Object(babylonjs_Materials_standardMaterial__WEBPACK_IMPORTED_MODULE_2__["CreateBox"])(this.name + "FrontMesh", {
             width: 1.0,
             height: 1.0,
             depth: 0.08
@@ -18000,8 +18091,8 @@ var HolographicSlate = /** @class */ (function (_super) {
     HolographicSlate.prototype._createNode = function (scene) {
         var _this = this;
         var node = new babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["Mesh"]("slate" + this.name, scene);
-        this._backPlate = babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["BoxBuilder"].CreateBox("backPlate" + this.name, { size: 1 }, scene);
-        this._contentPlate = babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["BoxBuilder"].CreateBox("contentPlate" + this.name, { size: 1 }, scene);
+        this._backPlate = Object(babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["CreateBox"])("backPlate" + this.name, { size: 1 }, scene);
+        this._contentPlate = Object(babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["CreateBox"])("contentPlate" + this.name, { size: 1 }, scene);
         this._backPlate.parent = node;
         this._backPlate.isNearGrabbable = true;
         this._contentPlate.parent = node;
@@ -18828,7 +18919,7 @@ var Slider3D = /** @class */ (function (_super) {
     // Mesh association
     Slider3D.prototype._createNode = function (scene) {
         var _this = this;
-        var sliderBackplate = babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["BoxBuilder"].CreateBox(this.name + "_sliderbackplate", {
+        var sliderBackplate = Object(babylonjs_Misc_observable__WEBPACK_IMPORTED_MODULE_1__["CreateBox"])(this.name + "_sliderbackplate", {
             width: 1.0,
             height: 1.0,
             depth: 1.0,
@@ -19441,8 +19532,8 @@ var TouchHolographicButton = /** @class */ (function (_super) {
             }
             if (!this._tooltipFade) {
                 // Create tooltip with mesh and text
-                this._tooltipMesh = babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["PlaneBuilder"].CreatePlane("", { size: 1 }, this._backPlate._scene);
-                var tooltipBackground = babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["PlaneBuilder"].CreatePlane("", { size: 1, sideOrientation: babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Mesh"].DOUBLESIDE }, this._backPlate._scene);
+                this._tooltipMesh = Object(babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["CreatePlane"])("", { size: 1 }, this._backPlate._scene);
+                var tooltipBackground = Object(babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["CreatePlane"])("", { size: 1, sideOrientation: babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Mesh"].DOUBLESIDE }, this._backPlate._scene);
                 var mat = new babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["StandardMaterial"]("", this._backPlate._scene);
                 mat.diffuseColor = babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["Color3"].FromHexString("#212121");
                 tooltipBackground.material = mat;
@@ -19608,7 +19699,7 @@ var TouchHolographicButton = /** @class */ (function (_super) {
         var _this = this;
         var _a;
         this.name = (_a = this.name) !== null && _a !== void 0 ? _a : "TouchHolographicButton";
-        var collisionMesh = babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["BoxBuilder"].CreateBox(this.name + "_collisionMesh", {
+        var collisionMesh = Object(babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["CreateBox"])(this.name + "_collisionMesh", {
             width: 1.0,
             height: 1.0,
             depth: this._frontPlateDepth,
@@ -19629,7 +19720,7 @@ var TouchHolographicButton = /** @class */ (function (_super) {
             }
             _this._frontPlate = importedFrontPlate;
         });
-        this._backPlate = babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["BoxBuilder"].CreateBox(this.name + "_backPlate", {
+        this._backPlate = Object(babylonjs_Maths_math_vector__WEBPACK_IMPORTED_MODULE_1__["CreateBox"])(this.name + "_backPlate", {
             width: 1.0,
             height: 1.0,
             depth: this._backPlateDepth,
@@ -19787,7 +19878,7 @@ var TouchHolographicMenu = /** @class */ (function (_super) {
     });
     TouchHolographicMenu.prototype._createNode = function (scene) {
         var node = new babylonjs_Meshes_mesh__WEBPACK_IMPORTED_MODULE_2__["Mesh"]("menu_" + this.name, scene);
-        this._backPlate = babylonjs_Meshes_mesh__WEBPACK_IMPORTED_MODULE_2__["BoxBuilder"].CreateBox("backPlate" + this.name, { size: 1 }, scene);
+        this._backPlate = Object(babylonjs_Meshes_mesh__WEBPACK_IMPORTED_MODULE_2__["CreateBox"])("backPlate" + this.name, { size: 1 }, scene);
         this._backPlate.parent = node;
         return node;
     };
@@ -20424,7 +20515,7 @@ var SideHandle = /** @class */ (function (_super) {
      */
     SideHandle.prototype.createNode = function () {
         // Create a simple vertical rectangle
-        var verticalBox = babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["BoxBuilder"].CreateBox("sideVert", { width: 1, height: 10, depth: 0.1 }, this._scene);
+        var verticalBox = Object(babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["CreateBox"])("sideVert", { width: 1, height: 10, depth: 0.1 }, this._scene);
         var sideNode = new babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["TransformNode"]("side", this._scene);
         verticalBox.parent = sideNode;
         var mat = this._createMaterial();
@@ -20450,8 +20541,8 @@ var CornerHandle = /** @class */ (function (_super) {
      */
     CornerHandle.prototype.createNode = function () {
         // Create 2 boxes making a bottom left corner
-        var horizontalBox = babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["BoxBuilder"].CreateBox("angleHor", { width: 3, height: 1, depth: 0.1 }, this._scene);
-        var verticalBox = babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["BoxBuilder"].CreateBox("angleVert", { width: 1, height: 3, depth: 0.1 }, this._scene);
+        var horizontalBox = Object(babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["CreateBox"])("angleHor", { width: 3, height: 1, depth: 0.1 }, this._scene);
+        var verticalBox = Object(babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["CreateBox"])("angleVert", { width: 1, height: 3, depth: 0.1 }, this._scene);
         var angleNode = new babylonjs_Meshes_Builders_boxBuilder__WEBPACK_IMPORTED_MODULE_1__["TransformNode"]("angle", this._scene);
         horizontalBox.parent = angleNode;
         verticalBox.parent = angleNode;
@@ -21321,11 +21412,11 @@ var FluentMaterial = /** @class */ (function (_super) {
                 return true;
             }
         }
-        if (!subMesh._materialDefines) {
+        if (!subMesh.materialDefines) {
             subMesh.materialDefines = new FluentMaterialDefines();
         }
         var scene = this.getScene();
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         if (!this.checkReadyOnEveryCall && subMesh.effect) {
             if (defines._renderId === scene.getRenderId()) {
                 return true;
@@ -21391,7 +21482,7 @@ var FluentMaterial = /** @class */ (function (_super) {
     };
     FluentMaterial.prototype.bindForSubMesh = function (world, mesh, subMesh) {
         var scene = this.getScene();
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         if (!defines) {
             return;
         }
@@ -21753,10 +21844,10 @@ var FluentBackplateMaterial = /** @class */ (function (_super) {
                 return true;
             }
         }
-        if (!subMesh._materialDefines) {
+        if (!subMesh.materialDefines) {
             subMesh.materialDefines = new FluentBackplateMaterialDefines();
         }
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         var scene = this.getScene();
         if (this._isReadyForSubMesh(subMesh)) {
             return true;
@@ -21837,7 +21928,7 @@ var FluentBackplateMaterial = /** @class */ (function (_super) {
     };
     FluentBackplateMaterial.prototype.bindForSubMesh = function (world, mesh, subMesh) {
         var _a, _b;
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         if (!defines) {
             return;
         }
@@ -22307,10 +22398,10 @@ var FluentButtonMaterial = /** @class */ (function (_super) {
                 return true;
             }
         }
-        if (!subMesh._materialDefines) {
+        if (!subMesh.materialDefines) {
             subMesh.materialDefines = new FluentButtonMaterialDefines();
         }
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         var scene = this.getScene();
         if (this._isReadyForSubMesh(subMesh)) {
             return true;
@@ -22429,7 +22520,7 @@ var FluentButtonMaterial = /** @class */ (function (_super) {
     };
     FluentButtonMaterial.prototype.bindForSubMesh = function (world, mesh, subMesh) {
         var scene = this.getScene();
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         if (!defines) {
             return;
         }
@@ -23153,10 +23244,10 @@ var MRDLBackplateMaterial = /** @class */ (function (_super) {
                 return true;
             }
         }
-        if (!subMesh._materialDefines) {
+        if (!subMesh.materialDefines) {
             subMesh.materialDefines = new MRDLBackplateMaterialDefines();
         }
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         var scene = this.getScene();
         if (this._isReadyForSubMesh(subMesh)) {
             return true;
@@ -23235,7 +23326,7 @@ var MRDLBackplateMaterial = /** @class */ (function (_super) {
         return true;
     };
     MRDLBackplateMaterial.prototype.bindForSubMesh = function (world, mesh, subMesh) {
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         if (!defines) {
             return;
         }
@@ -23768,10 +23859,10 @@ var MRDLSliderBarMaterial = /** @class */ (function (_super) {
                 return true;
             }
         }
-        if (!subMesh._materialDefines) {
+        if (!subMesh.materialDefines) {
             subMesh.materialDefines = new MRDLSliderBarMaterialDefines();
         }
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         var scene = this.getScene();
         if (this._isReadyForSubMesh(subMesh)) {
             return true;
@@ -23858,7 +23949,7 @@ var MRDLSliderBarMaterial = /** @class */ (function (_super) {
         return true;
     };
     MRDLSliderBarMaterial.prototype.bindForSubMesh = function (world, mesh, subMesh) {
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         if (!defines) {
             return;
         }
@@ -24573,10 +24664,10 @@ var MRDLSliderThumbMaterial = /** @class */ (function (_super) {
                 return true;
             }
         }
-        if (!subMesh._materialDefines) {
+        if (!subMesh.materialDefines) {
             subMesh.materialDefines = new MRDLSliderThumbMaterialDefines();
         }
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         var scene = this.getScene();
         if (this._isReadyForSubMesh(subMesh)) {
             return true;
@@ -24663,7 +24754,7 @@ var MRDLSliderThumbMaterial = /** @class */ (function (_super) {
         return true;
     };
     MRDLSliderThumbMaterial.prototype.bindForSubMesh = function (world, mesh, subMesh) {
-        var defines = subMesh._materialDefines;
+        var defines = subMesh.materialDefines;
         if (!defines) {
             return;
         }

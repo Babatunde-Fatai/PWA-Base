@@ -38,6 +38,44 @@ body,
 
 }
 
+.Slides {
+  /* Content is centered horizontally */
+  align-items: center;
+  display: flex;
+  z-index: 999;
+
+  /* Size */
+  height: 1.5rem;
+}
+.leftS {
+  /* Width based on the current value */
+  height: 2px;
+  width: 20%;
+
+  /* Colors */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.rightS {
+  /* Take the remaining width */
+  flex: 1;
+  height: 2px;
+  /* Colors */
+  background-color: rgba(228, 212, 212, 0.3);
+}
+
+.knob {
+  /* Size */
+  height: 1.5rem;
+  width: 1.5rem;
+
+  /* Rounded border */
+  border-radius: 9999px;
+
+  /* Colors */
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
 /* #container{
    width: 100%;
   height: 100%;

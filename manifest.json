@@ -2,6 +2,7 @@
     "name": "Maxa Experiences",
     "short_name": "Maxa Experiences",
     "version": "0.0.1",
+    "id": "/",
     "start_url": "/",
     "description": "Themes created with love for developers :-)",
     "display": "minimal-ui",

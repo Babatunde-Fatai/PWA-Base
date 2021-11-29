@@ -52,14 +52,21 @@ div{ /*Disuading DIV highligh*/
 
 .disabledtext {
   display: none;
-  color: white;
+  color: grey;
   /* background: blue; */
   font-size:0.8em; 
   position:absolute; 
   /* flex-direction: row; */
-  top:88%; 
+  top: 89%; 
   left:6%; 
   z-index:2;
+
+}
+
+.disabledtext a {
+ 
+  color: white;
+ 
 
 }
 
